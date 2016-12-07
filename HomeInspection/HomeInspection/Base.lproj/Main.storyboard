@@ -1,22 +1,84 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--DashboardViewController-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="DashboardViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="HomeInspection" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="9OM-Np-VwY">
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LNN-i5-Xls">
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="JGW-wu-gSR">
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7up-da-Qbi">
+                                                        <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="192" id="6u5-E0-v31"/>
+                                                        </constraints>
+                                                        <state key="normal" title="New Inspection"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fBh-SB-SFV">
+                                                        <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <state key="normal" title="Lookup Inspection"/>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="96" id="U3j-4I-jQf"/>
+                                                    <constraint firstItem="fBh-SB-SFV" firstAttribute="width" secondItem="7up-da-Qbi" secondAttribute="width" id="Zff-7K-ti2"/>
+                                                    <constraint firstItem="fBh-SB-SFV" firstAttribute="height" secondItem="7up-da-Qbi" secondAttribute="height" id="dP4-YZ-if5"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="JGW-wu-gSR" firstAttribute="width" secondItem="LNN-i5-Xls" secondAttribute="width" multiplier="2:3" id="1wP-pj-9vC"/>
+                                            <constraint firstItem="JGW-wu-gSR" firstAttribute="centerY" secondItem="LNN-i5-Xls" secondAttribute="centerY" id="KzM-1l-aRC"/>
+                                            <constraint firstItem="JGW-wu-gSR" firstAttribute="centerX" secondItem="LNN-i5-Xls" secondAttribute="centerX" id="lCK-Ke-Sm0"/>
+                                        </constraints>
+                                    </view>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="00C-Ek-xxo">
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="tYe-ck-vYT">
+                                                <rect key="frame" x="0.0" y="28" width="1024" height="44"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tYe-ck-vYT" id="XbB-JQ-gRd">
+                                                    <frame key="frameInset" width="1024" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </tableViewCellContentView>
+                                            </tableViewCell>
+                                        </prototypes>
+                                    </tableView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="LNN-i5-Xls" firstAttribute="width" secondItem="9OM-Np-VwY" secondAttribute="width" id="Ioz-HT-Mbc"/>
+                                    <constraint firstItem="00C-Ek-xxo" firstAttribute="height" secondItem="LNN-i5-Xls" secondAttribute="height" multiplier="5:1" id="UIR-wh-vdO"/>
+                                    <constraint firstItem="00C-Ek-xxo" firstAttribute="width" secondItem="9OM-Np-VwY" secondAttribute="width" id="dGp-fu-3gN"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="9OM-Np-VwY" secondAttribute="bottom" id="1bU-H1-bvu"/>
+                            <constraint firstItem="9OM-Np-VwY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="2iP-Aa-Bpc"/>
+                            <constraint firstItem="9OM-Np-VwY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="itJ-3a-PgR"/>
+                            <constraint firstAttribute="trailing" secondItem="9OM-Np-VwY" secondAttribute="trailing" id="kY0-Zz-Jd8"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
