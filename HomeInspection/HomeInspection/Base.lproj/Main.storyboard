@@ -241,7 +241,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l3C-u5-d2w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="910" y="-577"/>
+            <point key="canvasLocation" x="950" y="-608"/>
         </scene>
         <!--LookupViewController-->
         <scene sceneID="Xtb-gN-iVp">
@@ -373,12 +373,12 @@
         <!--InspInfoViewController-->
         <scene sceneID="VnU-u1-wuv">
             <objects>
-                <viewController title="InspInfoViewController" id="Pfh-pN-Z8S" sceneMemberID="viewController">
+                <viewController title="InspInfoViewController" id="Pfh-pN-Z8S" customClass="InspInfoViewController" customModule="HomeInspection" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="KPV-sS-um0"/>
                         <viewControllerLayoutGuide type="bottom" id="1uW-o9-3Wr"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="5YY-DA-3tk">
+                    <view key="view" contentMode="scaleToFill" id="5YY-DA-3tk" customClass="InspInfoView" customModule="HomeInspection" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
@@ -580,8 +580,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Ekw-ZP-0Uf"/>
+        <segue reference="IUe-RV-VY6"/>
         <segue reference="Q0c-Xq-bxB"/>
-        <segue reference="Amg-T0-GCF"/>
+        <segue reference="WDh-PB-lX3"/>
     </inferredMetricsTieBreakers>
 </document>

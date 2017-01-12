@@ -21,6 +21,8 @@
 		412FA10E1E2718ED00DE6BB9 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412FA10D1E2718ED00DE6BB9 /* DashboardView.swift */; };
 		412FA1101E271A8100DE6BB9 /* LookupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412FA10F1E271A8100DE6BB9 /* LookupView.swift */; };
 		412FA1121E271ABD00DE6BB9 /* LookupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412FA1111E271ABD00DE6BB9 /* LookupViewController.swift */; };
+		412FA1141E27200100DE6BB9 /* InspInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412FA1131E27200100DE6BB9 /* InspInfoViewController.swift */; };
+		412FA1161E27203900DE6BB9 /* InspInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412FA1151E27203900DE6BB9 /* InspInfoView.swift */; };
 		41C5B7961DF8F8E2002D5D0B /* PaneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C5B7951DF8F8E2002D5D0B /* PaneViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +64,8 @@
 		412FA10D1E2718ED00DE6BB9 /* DashboardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		412FA10F1E271A8100DE6BB9 /* LookupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LookupView.swift; sourceTree = "<group>"; };
 		412FA1111E271ABD00DE6BB9 /* LookupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LookupViewController.swift; sourceTree = "<group>"; };
+		412FA1131E27200100DE6BB9 /* InspInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InspInfoViewController.swift; sourceTree = "<group>"; };
+		412FA1151E27203900DE6BB9 /* InspInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InspInfoView.swift; sourceTree = "<group>"; };
 		41C5B7951DF8F8E2002D5D0B /* PaneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaneViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -122,6 +126,8 @@
 				412FA1051E27160D00DE6BB9 /* CommentViewController.swift */,
 				412FA10F1E271A8100DE6BB9 /* LookupView.swift */,
 				412FA1111E271ABD00DE6BB9 /* LookupViewController.swift */,
+				412FA1151E27203900DE6BB9 /* InspInfoView.swift */,
+				412FA1131E27200100DE6BB9 /* InspInfoViewController.swift */,
 				41243D4F1DF88AC5007747C3 /* Main.storyboard */,
 				41243D541DF88AC5007747C3 /* LaunchScreen.storyboard */,
 				41243D521DF88AC5007747C3 /* Assets.xcassets */,
@@ -285,9 +291,11 @@
 			files = (
 				412FA1101E271A8100DE6BB9 /* LookupView.swift in Sources */,
 				412FA10C1E27184600DE6BB9 /* PaneView.swift in Sources */,
+				412FA1141E27200100DE6BB9 /* InspInfoViewController.swift in Sources */,
 				412FA10E1E2718ED00DE6BB9 /* DashboardView.swift in Sources */,
 				412FA1081E2717ED00DE6BB9 /* CommentView.swift in Sources */,
 				412FA1061E27160D00DE6BB9 /* CommentViewController.swift in Sources */,
+				412FA1161E27203900DE6BB9 /* InspInfoView.swift in Sources */,
 				41243D4E1DF88AC5007747C3 /* DashboardViewController.swift in Sources */,
 				412FA1041E2715E200DE6BB9 /* StateController.swift in Sources */,
 				41C5B7961DF8F8E2002D5D0B /* PaneViewController.swift in Sources */,
