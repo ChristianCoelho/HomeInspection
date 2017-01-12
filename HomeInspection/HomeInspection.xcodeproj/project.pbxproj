@@ -8,12 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		41243D4C1DF88AC5007747C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41243D4B1DF88AC5007747C3 /* AppDelegate.swift */; };
-		41243D4E1DF88AC5007747C3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41243D4D1DF88AC5007747C3 /* ViewController.swift */; };
+		41243D4E1DF88AC5007747C3 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41243D4D1DF88AC5007747C3 /* DashboardViewController.swift */; };
 		41243D511DF88AC5007747C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41243D4F1DF88AC5007747C3 /* Main.storyboard */; };
 		41243D531DF88AC5007747C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41243D521DF88AC5007747C3 /* Assets.xcassets */; };
 		41243D561DF88AC5007747C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41243D541DF88AC5007747C3 /* LaunchScreen.storyboard */; };
 		41243D611DF88AC6007747C3 /* HomeInspectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41243D601DF88AC6007747C3 /* HomeInspectionTests.swift */; };
 		41243D6C1DF88AC6007747C3 /* HomeInspectionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41243D6B1DF88AC6007747C3 /* HomeInspectionUITests.swift */; };
+		412FA1041E2715E200DE6BB9 /* StateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412FA1031E2715E200DE6BB9 /* StateController.swift */; };
+		412FA1061E27160D00DE6BB9 /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412FA1051E27160D00DE6BB9 /* CommentViewController.swift */; };
+		412FA1081E2717ED00DE6BB9 /* CommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412FA1071E2717ED00DE6BB9 /* CommentView.swift */; };
+		412FA10C1E27184600DE6BB9 /* PaneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412FA10B1E27184600DE6BB9 /* PaneView.swift */; };
+		412FA10E1E2718ED00DE6BB9 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412FA10D1E2718ED00DE6BB9 /* DashboardView.swift */; };
+		412FA1101E271A8100DE6BB9 /* LookupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412FA10F1E271A8100DE6BB9 /* LookupView.swift */; };
+		412FA1121E271ABD00DE6BB9 /* LookupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412FA1111E271ABD00DE6BB9 /* LookupViewController.swift */; };
 		41C5B7961DF8F8E2002D5D0B /* PaneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C5B7951DF8F8E2002D5D0B /* PaneViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -37,7 +44,7 @@
 /* Begin PBXFileReference section */
 		41243D481DF88AC5007747C3 /* HomeInspection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeInspection.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41243D4B1DF88AC5007747C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		41243D4D1DF88AC5007747C3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		41243D4D1DF88AC5007747C3 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		41243D501DF88AC5007747C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		41243D521DF88AC5007747C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		41243D551DF88AC5007747C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -48,6 +55,13 @@
 		41243D671DF88AC6007747C3 /* HomeInspectionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HomeInspectionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		41243D6B1DF88AC6007747C3 /* HomeInspectionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInspectionUITests.swift; sourceTree = "<group>"; };
 		41243D6D1DF88AC6007747C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		412FA1031E2715E200DE6BB9 /* StateController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StateController.swift; sourceTree = "<group>"; };
+		412FA1051E27160D00DE6BB9 /* CommentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
+		412FA1071E2717ED00DE6BB9 /* CommentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentView.swift; sourceTree = "<group>"; };
+		412FA10B1E27184600DE6BB9 /* PaneView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaneView.swift; sourceTree = "<group>"; };
+		412FA10D1E2718ED00DE6BB9 /* DashboardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		412FA10F1E271A8100DE6BB9 /* LookupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LookupView.swift; sourceTree = "<group>"; };
+		412FA1111E271ABD00DE6BB9 /* LookupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LookupViewController.swift; sourceTree = "<group>"; };
 		41C5B7951DF8F8E2002D5D0B /* PaneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaneViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -99,12 +113,19 @@
 		41243D4A1DF88AC5007747C3 /* HomeInspection */ = {
 			isa = PBXGroup;
 			children = (
-				41243D4B1DF88AC5007747C3 /* AppDelegate.swift */,
-				41243D4D1DF88AC5007747C3 /* ViewController.swift */,
-				41243D4F1DF88AC5007747C3 /* Main.storyboard */,
+				412FA1031E2715E200DE6BB9 /* StateController.swift */,
+				412FA10D1E2718ED00DE6BB9 /* DashboardView.swift */,
+				41243D4D1DF88AC5007747C3 /* DashboardViewController.swift */,
+				412FA10B1E27184600DE6BB9 /* PaneView.swift */,
 				41C5B7951DF8F8E2002D5D0B /* PaneViewController.swift */,
-				41243D521DF88AC5007747C3 /* Assets.xcassets */,
+				412FA1071E2717ED00DE6BB9 /* CommentView.swift */,
+				412FA1051E27160D00DE6BB9 /* CommentViewController.swift */,
+				412FA10F1E271A8100DE6BB9 /* LookupView.swift */,
+				412FA1111E271ABD00DE6BB9 /* LookupViewController.swift */,
+				41243D4F1DF88AC5007747C3 /* Main.storyboard */,
 				41243D541DF88AC5007747C3 /* LaunchScreen.storyboard */,
+				41243D521DF88AC5007747C3 /* Assets.xcassets */,
+				41243D4B1DF88AC5007747C3 /* AppDelegate.swift */,
 				41243D571DF88AC6007747C3 /* Info.plist */,
 			);
 			path = HomeInspection;
@@ -191,7 +212,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Jared Speck";
 				TargetAttributes = {
 					41243D471DF88AC5007747C3 = {
@@ -262,8 +283,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				41243D4E1DF88AC5007747C3 /* ViewController.swift in Sources */,
+				412FA1101E271A8100DE6BB9 /* LookupView.swift in Sources */,
+				412FA10C1E27184600DE6BB9 /* PaneView.swift in Sources */,
+				412FA10E1E2718ED00DE6BB9 /* DashboardView.swift in Sources */,
+				412FA1081E2717ED00DE6BB9 /* CommentView.swift in Sources */,
+				412FA1061E27160D00DE6BB9 /* CommentViewController.swift in Sources */,
+				41243D4E1DF88AC5007747C3 /* DashboardViewController.swift in Sources */,
+				412FA1041E2715E200DE6BB9 /* StateController.swift in Sources */,
 				41C5B7961DF8F8E2002D5D0B /* PaneViewController.swift in Sources */,
+				412FA1121E271ABD00DE6BB9 /* LookupViewController.swift in Sources */,
 				41243D4C1DF88AC5007747C3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -337,6 +365,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -387,6 +416,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
