@@ -10,6 +10,8 @@ import UIKit
 
 class SubSectionTableViewCell: UITableViewCell {
 
+    // MARK: - Properties
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -17,7 +17,6 @@ class Comment {
     //MARK: Initialization
     init!(comText: String!, severity: Int8!) {
  
-        
         // Initialize comment properties
         self.comText = comText
         self.severity = severity
