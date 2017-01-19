@@ -8,11 +8,10 @@
 
 import UIKit
 
-class CommentTableViewCell: UITableViewCell {
+class CommentCell: UITableViewCell {
 
     //MARK: Properties
-    @IBOutlet weak var statusText: UILabel!
-    @IBOutlet weak var subSecName: UILabel!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
