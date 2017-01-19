@@ -16,6 +16,11 @@ class SubSectionTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // Register XIB's
+        let subSectionHeaderNib = UINib(nibName: "SubSectionHeaderCell", bundle: nil)
+        tableView.register(subSectionHeaderNib, forHeaderFooterViewReuseIdentifier: "SubSectionHeaderCell")
+        
+        
         // Load sample subsections for testing
         loadSampleSubSections()
         
@@ -40,49 +45,38 @@ class SubSectionTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // Return the number of rows
-        return 3
+        return 5
     }
 
     
+    // Comment Cells
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        var cell: UITableViewCell
-        
-        NSLog("Trouble Ahead")
-        
         // Populate table with subsections and comments
-        //if (indexPath.row == 0) {
-            if let subSectionCell = tableView.dequeueReusableCell(withIdentifier: "SubSectionTableViewCell") as? SubSectionTableViewCell {
-                cell = subSectionCell
-            }
-            else {
-                fatalError("cannot reuse ssec")
-            }
-        /*}
-        else {
-            if let commentCell = tableView.dequeueReusableCell(withIdentifier: "CommentTableViewCell", for: indexPath) as? CommentTableViewCell {
-                cell = commentCell
-            }
-            else {
-                fatalError("Cannot reuse comment")
-            }
-        }*/
-
-        NSLog("Good Reuse :)")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CommentCell", for: indexPath)
         
         // Configure the cell...
-        //let subSection = subSections[indexPath.row]
-
-        //cell.subSectionName.text = "Testing"
         
         return cell
     }
-    
-    // Override to change the name of the headers for each section (the subsection name for each list of comments)
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Test Header"
-    }
 
+    // Sets the view for the headers in the table (the sub section header cell)
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        
+        let headerCell = tableView.dequeueReusableCell(withIdentifier: "SubSectionHeaderCell") as! SubSectionHeaderCell
+        
+        headerCell.subSectionName.text = "Testing SubSection \(section + 1)"
+        headerCell.subSectionStatusText.text = "All Clear On \(section + 1)"
+        
+        return headerCell
+        
+    }
+    
+    // Sets the header height
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 96
+    }
+    
     
     /*
     // Override to support conditional editing of the table view.
@@ -129,6 +123,8 @@ class SubSectionTableViewController: UITableViewController {
     }
     */
     
+    
+    // TESTING: Loads (3) sample subsections into table
     private func loadSampleSubSections() {
         guard let subSec1 = SubSection(subSectionId: 1, commentIds: [1, 4, 6])
             else {

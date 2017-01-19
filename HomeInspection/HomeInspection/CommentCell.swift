@@ -8,9 +8,10 @@
 
 import UIKit
 
-class CommentTableViewCell: UITableViewCell {
+class CommentCell: UITableViewCell {
 
     //MARK: Properties
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
