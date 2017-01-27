@@ -8,7 +8,7 @@
 
 import UIKit
 
-class InspInfoViewController: UIViewController {
+class InspDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
