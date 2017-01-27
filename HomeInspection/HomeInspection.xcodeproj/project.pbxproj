@@ -17,14 +17,14 @@
 		412FA1041E2715E200DE6BB9 /* StateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412FA1031E2715E200DE6BB9 /* StateController.swift */; };
 		412FA1061E27160D00DE6BB9 /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412FA1051E27160D00DE6BB9 /* CommentViewController.swift */; };
 		412FA1121E271ABD00DE6BB9 /* LookupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412FA1111E271ABD00DE6BB9 /* LookupViewController.swift */; };
-		412FA1141E27200100DE6BB9 /* InspInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412FA1131E27200100DE6BB9 /* InspInfoViewController.swift */; };
+		412FA1141E27200100DE6BB9 /* InspDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412FA1131E27200100DE6BB9 /* InspDetailsViewController.swift */; };
 		41C5B7961DF8F8E2002D5D0B /* PaneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C5B7951DF8F8E2002D5D0B /* PaneViewController.swift */; };
 		41E047C51E27F1F000E6804B /* PaneTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E047C41E27F1F000E6804B /* PaneTableViewCell.swift */; };
 		41E047C71E27F22900E6804B /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E047C61E27F22900E6804B /* DashboardView.swift */; };
 		41E047C91E27F23F00E6804B /* PaneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E047C81E27F23F00E6804B /* PaneView.swift */; };
 		41E047CB1E27F25100E6804B /* CommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E047CA1E27F25100E6804B /* CommentView.swift */; };
 		41E047CD1E27F26700E6804B /* LookupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E047CC1E27F26700E6804B /* LookupView.swift */; };
-		41E047CF1E27F27A00E6804B /* InspInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E047CE1E27F27A00E6804B /* InspInfoView.swift */; };
+		41E047CF1E27F27A00E6804B /* InspDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E047CE1E27F27A00E6804B /* InspDetailsView.swift */; };
 		41E047D11E27F2B700E6804B /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E047D01E27F2B700E6804B /* CommentCell.swift */; };
 		41E047D31E27FCFB00E6804B /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E047D21E27FCFB00E6804B /* Comment.swift */; };
 		41E047D51E28000B00E6804B /* CommentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E047D41E28000B00E6804B /* CommentTableViewController.swift */; };
@@ -68,14 +68,14 @@
 		412FA1031E2715E200DE6BB9 /* StateController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StateController.swift; sourceTree = "<group>"; };
 		412FA1051E27160D00DE6BB9 /* CommentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
 		412FA1111E271ABD00DE6BB9 /* LookupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LookupViewController.swift; sourceTree = "<group>"; };
-		412FA1131E27200100DE6BB9 /* InspInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InspInfoViewController.swift; sourceTree = "<group>"; };
+		412FA1131E27200100DE6BB9 /* InspDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InspDetailsViewController.swift; sourceTree = "<group>"; };
 		41C5B7951DF8F8E2002D5D0B /* PaneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaneViewController.swift; sourceTree = "<group>"; };
 		41E047C41E27F1F000E6804B /* PaneTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaneTableViewCell.swift; sourceTree = "<group>"; };
 		41E047C61E27F22900E6804B /* DashboardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		41E047C81E27F23F00E6804B /* PaneView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaneView.swift; sourceTree = "<group>"; };
 		41E047CA1E27F25100E6804B /* CommentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentView.swift; sourceTree = "<group>"; };
 		41E047CC1E27F26700E6804B /* LookupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LookupView.swift; sourceTree = "<group>"; };
-		41E047CE1E27F27A00E6804B /* InspInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InspInfoView.swift; sourceTree = "<group>"; };
+		41E047CE1E27F27A00E6804B /* InspDetailsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InspDetailsView.swift; sourceTree = "<group>"; };
 		41E047D01E27F2B700E6804B /* CommentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
 		41E047D21E27FCFB00E6804B /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		41E047D41E28000B00E6804B /* CommentTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentTableViewController.swift; sourceTree = "<group>"; };
@@ -133,13 +133,14 @@
 		41243D4A1DF88AC5007747C3 /* HomeInspection */ = {
 			isa = PBXGroup;
 			children = (
+				412C45161E3C123900D713D6 /* Dashboard Page */,
+				412C45171E3C125200D713D6 /* Lookup Page */,
+				412C45151E3C121D00D713D6 /* Navigation Pane */,
+				412C45141E3C116D00D713D6 /* Inspection Details Page */,
+				412C45181E3C12AF00D713D6 /* Inspection Page */,
+				41243D4F1DF88AC5007747C3 /* Main.storyboard */,
 				412FA1031E2715E200DE6BB9 /* StateController.swift */,
 				41E047DD1E28010500E6804B /* Data Models */,
-				41E047D91E2800B600E6804B /* Views */,
-				41E047DA1E2800C600E6804B /* View Controllers */,
-				41E047DB1E2800E000E6804B /* Table View Cells */,
-				41E047DC1E2800F000E6804B /* Table View Controllers */,
-				41243D4F1DF88AC5007747C3 /* Main.storyboard */,
 				41E047DE1E28011900E6804B /* Other Stuff */,
 			);
 			path = HomeInspection;
@@ -163,48 +164,55 @@
 			path = HomeInspectionUITests;
 			sourceTree = "<group>";
 		};
-		41E047D91E2800B600E6804B /* Views */ = {
+		412C45141E3C116D00D713D6 /* Inspection Details Page */ = {
+			isa = PBXGroup;
+			children = (
+				41E047CE1E27F27A00E6804B /* InspDetailsView.swift */,
+				412FA1131E27200100DE6BB9 /* InspDetailsViewController.swift */,
+			);
+			name = "Inspection Details Page";
+			sourceTree = "<group>";
+		};
+		412C45151E3C121D00D713D6 /* Navigation Pane */ = {
+			isa = PBXGroup;
+			children = (
+				41E047C81E27F23F00E6804B /* PaneView.swift */,
+				41C5B7951DF8F8E2002D5D0B /* PaneViewController.swift */,
+				41E047C41E27F1F000E6804B /* PaneTableViewCell.swift */,
+				41E047D61E28002F00E6804B /* PaneTableViewController.swift */,
+			);
+			name = "Navigation Pane";
+			sourceTree = "<group>";
+		};
+		412C45161E3C123900D713D6 /* Dashboard Page */ = {
 			isa = PBXGroup;
 			children = (
 				41E047C61E27F22900E6804B /* DashboardView.swift */,
-				41E047CE1E27F27A00E6804B /* InspInfoView.swift */,
-				41E047CC1E27F26700E6804B /* LookupView.swift */,
-				41E047C81E27F23F00E6804B /* PaneView.swift */,
-				41E047CA1E27F25100E6804B /* CommentView.swift */,
-			);
-			name = Views;
-			sourceTree = "<group>";
-		};
-		41E047DA1E2800C600E6804B /* View Controllers */ = {
-			isa = PBXGroup;
-			children = (
 				41243D4D1DF88AC5007747C3 /* DashboardViewController.swift */,
-				412FA1131E27200100DE6BB9 /* InspInfoViewController.swift */,
-				412FA1111E271ABD00DE6BB9 /* LookupViewController.swift */,
-				41C5B7951DF8F8E2002D5D0B /* PaneViewController.swift */,
-				412FA1051E27160D00DE6BB9 /* CommentViewController.swift */,
 			);
-			name = "View Controllers";
+			name = "Dashboard Page";
 			sourceTree = "<group>";
 		};
-		41E047DB1E2800E000E6804B /* Table View Cells */ = {
+		412C45171E3C125200D713D6 /* Lookup Page */ = {
 			isa = PBXGroup;
 			children = (
-				41E047C41E27F1F000E6804B /* PaneTableViewCell.swift */,
+				41E047CC1E27F26700E6804B /* LookupView.swift */,
+				412FA1111E271ABD00DE6BB9 /* LookupViewController.swift */,
+			);
+			name = "Lookup Page";
+			sourceTree = "<group>";
+		};
+		412C45181E3C12AF00D713D6 /* Inspection Page */ = {
+			isa = PBXGroup;
+			children = (
+				412FA1051E27160D00DE6BB9 /* CommentViewController.swift */,
+				41E047CA1E27F25100E6804B /* CommentView.swift */,
+				41E047DF1E2805ED00E6804B /* SubSectionTableViewController.swift */,
+				41E047D41E28000B00E6804B /* CommentTableViewController.swift */,
 				41E047E11E28061300E6804B /* SubSectionHeaderCell.swift */,
 				41E047D01E27F2B700E6804B /* CommentCell.swift */,
 			);
-			name = "Table View Cells";
-			sourceTree = "<group>";
-		};
-		41E047DC1E2800F000E6804B /* Table View Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				41E047D61E28002F00E6804B /* PaneTableViewController.swift */,
-				41E047DF1E2805ED00E6804B /* SubSectionTableViewController.swift */,
-				41E047D41E28000B00E6804B /* CommentTableViewController.swift */,
-			);
-			name = "Table View Controllers";
+			name = "Inspection Page";
 			sourceTree = "<group>";
 		};
 		41E047DD1E28010500E6804B /* Data Models */ = {
@@ -364,14 +372,14 @@
 				41E047CD1E27F26700E6804B /* LookupView.swift in Sources */,
 				41E047C91E27F23F00E6804B /* PaneView.swift in Sources */,
 				41E047C51E27F1F000E6804B /* PaneTableViewCell.swift in Sources */,
-				412FA1141E27200100DE6BB9 /* InspInfoViewController.swift in Sources */,
+				412FA1141E27200100DE6BB9 /* InspDetailsViewController.swift in Sources */,
 				412FA1061E27160D00DE6BB9 /* CommentViewController.swift in Sources */,
 				41243D4E1DF88AC5007747C3 /* DashboardViewController.swift in Sources */,
 				41E047C71E27F22900E6804B /* DashboardView.swift in Sources */,
 				41E047E21E28061300E6804B /* SubSectionHeaderCell.swift in Sources */,
 				412FA1041E2715E200DE6BB9 /* StateController.swift in Sources */,
 				41C5B7961DF8F8E2002D5D0B /* PaneViewController.swift in Sources */,
-				41E047CF1E27F27A00E6804B /* InspInfoView.swift in Sources */,
+				41E047CF1E27F27A00E6804B /* InspDetailsView.swift in Sources */,
 				41E047D51E28000B00E6804B /* CommentTableViewController.swift in Sources */,
 				41E047D31E27FCFB00E6804B /* Comment.swift in Sources */,
 				412FA1121E271ABD00DE6BB9 /* LookupViewController.swift in Sources */,

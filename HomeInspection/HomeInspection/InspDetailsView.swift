@@ -8,7 +8,7 @@
 
 import UIKit
 
-class InspInfoView: UIView {
+class InspDetailsView: UIView {
 
     /*
     // Only override draw() if you perform custom drawing.

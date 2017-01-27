@@ -445,7 +445,7 @@
                                 <rect key="frame" x="0.0" y="28" width="1024" height="128"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DOe-45-48K" id="6qh-pf-fJs">
-                                    <rect key="frame" x="0.0" y="0.0" width="1024" height="127"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="1024" height="128"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="0.45000000000000001" alpha="1" colorSpace="calibratedWhite"/>
@@ -566,7 +566,7 @@
                                                 <rect key="frame" x="0.0" y="28" width="1024" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iN5-Hz-isy" id="96F-0s-UNO">
-                                                    <rect key="frame" x="0.0" y="0.0" width="1024" height="43"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="1024" height="44"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </tableViewCellContentView>
                                             </tableViewCell>
@@ -588,10 +588,10 @@
             </objects>
             <point key="canvasLocation" x="253" y="258"/>
         </scene>
-        <!--InspInfoViewController-->
+        <!--InspDetailsViewController-->
         <scene sceneID="VnU-u1-wuv">
             <objects>
-                <viewController title="InspInfoViewController" id="Pfh-pN-Z8S" customClass="InspInfoViewController" customModule="HomeInspection" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="InspDetailsViewController" id="Pfh-pN-Z8S" customClass="InspDetailsViewController" customModule="HomeInspection" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="KPV-sS-um0"/>
                         <viewControllerLayoutGuide type="bottom" id="1uW-o9-3Wr"/>
@@ -801,7 +801,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="Q0c-Xq-bxB"/>
-        <segue reference="Ekw-ZP-0Uf"/>
-        <segue reference="Amg-T0-GCF"/>
+        <segue reference="IUe-RV-VY6"/>
+        <segue reference="WDh-PB-lX3"/>
     </inferredMetricsTieBreakers>
 </document>
