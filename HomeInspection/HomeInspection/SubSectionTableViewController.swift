@@ -49,7 +49,7 @@ class SubSectionTableViewController: UITableViewController {
      */
     override func numberOfSections(in tableView: UITableView) -> Int {
         // Return the number of sections
-        return subSections.count + 3
+        return subSections.count
     }
 
     
@@ -58,7 +58,7 @@ class SubSectionTableViewController: UITableViewController {
      */
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // Return the number of rows
-        return 8
+        return 5
     }
 
     
@@ -77,6 +77,9 @@ class SubSectionTableViewController: UITableViewController {
         
         // Dequeue a reusable cell based off of identifier
         let cell = self.tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as UITableViewCell
+        
+        // Remove selection highlighting
+        cell.selectionStyle = UITableViewCellSelectionStyle.none
         
         // Reuse old cell
         numReuses += 1
@@ -101,7 +104,15 @@ class SubSectionTableViewController: UITableViewController {
             
             // Initialize comment cell values
             commentCell.commentLabel.text = "Comment \(indexPath.row)"
-            commentCell.commentStatus.addTarget(self, action: Selector("stateChanged"), for: UIControlEvents.valueChanged)
+            commentCell.statusToggleAction = { (commentCell) in
+                let isOn = commentCell.commentStatus.isOn
+                commentCell.commentNotesButton.isEnabled = isOn
+                commentCell.commentFlagsButton.isEnabled = isOn
+                commentCell.commentPhotoButton.isEnabled = isOn
+                commentCell.commentNotesButton.isHidden = !isOn
+                commentCell.commentFlagsButton.isHidden = !isOn
+                commentCell.commentPhotoButton.isHidden = !isOn
+            }
             
             return commentCell
         }
@@ -122,14 +133,14 @@ class SubSectionTableViewController: UITableViewController {
     
     // MARK - Event Handlers
     
-    @IBAction func stateChanged(sender: UISwitch) {
-        let commentCell = sender.superview as! CommentViewCell
-        commentCell.commentNotesButton.isEnabled = sender.isOn
-        commentCell.commentFlagsButton.isEnabled = sender.isOn
-        commentCell.commentPhotoButton.isEnabled = sender.isOn
-        commentCell.commentNotesButton.isHidden = !sender.isOn
-        commentCell.commentFlagsButton.isHidden = !sender.isOn
-        commentCell.commentPhotoButton.isHidden = !sender.isOn
+    func commentStatusChanged(cell: CommentViewCell) -> Void {
+        let isOn = cell.commentStatus.isOn
+        cell.commentNotesButton.isEnabled = isOn
+        cell.commentFlagsButton.isEnabled = isOn
+        cell.commentPhotoButton.isEnabled = isOn
+        cell.commentNotesButton.isHidden = !isOn
+        cell.commentFlagsButton.isHidden = !isOn
+        cell.commentPhotoButton.isHidden = !isOn
     }
     
     

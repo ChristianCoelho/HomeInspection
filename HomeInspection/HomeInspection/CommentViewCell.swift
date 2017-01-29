@@ -10,12 +10,22 @@ import UIKit
 
 class CommentViewCell: UITableViewCell {
 
+    
     // MARK - Properties
     @IBOutlet weak var commentStatus: UISwitch!
     @IBOutlet weak var commentLabel: UILabel!
     @IBOutlet weak var commentNotesButton: UIButton!
     @IBOutlet weak var commentFlagsButton: UIButton!
     @IBOutlet weak var commentPhotoButton: UIButton!
+    @IBAction func statusToggle(_ sender: Any) {
+        statusToggleAction?(self)
+    }
+    
+    // Closure variable for status switch toggle (set by table's controller during cell init)
+    var statusToggleAction: ((CommentViewCell) -> Void)?
+    
+    
+    // MARK - Functions
     
     override func awakeFromNib() {
         super.awakeFromNib()

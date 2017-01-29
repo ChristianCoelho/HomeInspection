@@ -14,6 +14,11 @@ class SubSectionHeaderViewCell: UITableViewCell {
     @IBOutlet weak var subSectionLabel: UILabel!
     @IBOutlet weak var subSectionStatus: UISwitch!
     @IBOutlet weak var subSectionStatusLabel: UILabel!
+
+
+    
+    
+    // MARK - Functions
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -26,6 +31,7 @@ class SubSectionHeaderViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    // Init the cell
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }

@@ -7,7 +7,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -17,53 +16,64 @@
             <rect key="frame" x="0.0" y="0.0" width="1024" height="64"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="1024" height="63"/>
+                <rect key="frame" x="0.0" y="0.0" width="1024" height="64"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="j41-AR-iLE">
                         <rect key="frame" x="8" y="8" width="1008" height="47.5"/>
                         <subviews>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="l9P-qv-MA9">
-                                <rect key="frame" x="0.0" y="8.5" width="68" height="31"/>
+                                <rect key="frame" x="0.0" y="8.5" width="66" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="64" id="SIU-zb-hcb"/>
+                                </constraints>
                                 <color key="onTintColor" red="0.0" green="0.39011696099999998" blue="0.78802083329999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="statusToggle:" destination="KGk-i7-Jjw" eventType="valueChanged" id="trc-lS-MuU"/>
+                                </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comment (placeholder)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oGc-LW-8LB">
-                                <rect key="frame" x="71" y="13.5" width="724" height="20.5"/>
+                                <rect key="frame" x="69" y="13.5" width="732" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="caM-G6-BvL">
-                                <rect key="frame" x="800" y="0.0" width="66" height="47.5"/>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="caM-G6-BvL">
+                                <rect key="frame" x="806" y="0.0" width="64" height="47.5"/>
                                 <color key="backgroundColor" white="0.40000000000000002" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="64" id="OGe-CR-oZo"/>
+                                </constraints>
                                 <state key="normal" title="Add Notes">
                                     <color key="titleColor" cocoaTouchSystemColor="lightTextColor"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="tbo-5n-2Vy">
-                                <rect key="frame" x="871" y="0.0" width="65.5" height="47.5"/>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="tbo-5n-2Vy">
+                                <rect key="frame" x="875" y="0.0" width="64" height="47.5"/>
                                 <color key="backgroundColor" white="0.34999999999999998" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="64" id="UMx-1G-2mf"/>
+                                </constraints>
                                 <state key="normal" title="Add Flags">
                                     <color key="titleColor" cocoaTouchSystemColor="lightTextColor"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="OPB-l2-QyI">
-                                <rect key="frame" x="941.5" y="0.0" width="66.5" height="47.5"/>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="OPB-l2-QyI">
+                                <rect key="frame" x="944" y="0.0" width="64" height="47.5"/>
                                 <color key="backgroundColor" white="0.29999999999999999" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="64" id="7w7-lk-Qfw"/>
+                                </constraints>
                                 <state key="normal" title="Add Photo">
                                     <color key="titleColor" cocoaTouchSystemColor="lightTextColor"/>
                                 </state>
                             </button>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="caM-G6-BvL" firstAttribute="width" secondItem="l9P-qv-MA9" secondAttribute="width" id="8Zp-EA-aOk"/>
-                            <constraint firstItem="oGc-LW-8LB" firstAttribute="width" secondItem="l9P-qv-MA9" secondAttribute="width" multiplier="11" id="KTT-py-MRl"/>
                             <constraint firstItem="OPB-l2-QyI" firstAttribute="height" secondItem="caM-G6-BvL" secondAttribute="height" id="KZi-RY-cvw"/>
                             <constraint firstItem="tbo-5n-2Vy" firstAttribute="height" secondItem="caM-G6-BvL" secondAttribute="height" id="Kx6-A1-HZA"/>
                             <constraint firstAttribute="bottom" secondItem="caM-G6-BvL" secondAttribute="bottom" id="QPb-RC-hCM"/>
                             <constraint firstItem="caM-G6-BvL" firstAttribute="top" secondItem="j41-AR-iLE" secondAttribute="top" id="Ty6-Wr-lTe"/>
-                            <constraint firstItem="OPB-l2-QyI" firstAttribute="width" secondItem="caM-G6-BvL" secondAttribute="width" id="bNk-2V-dMD"/>
-                            <constraint firstItem="tbo-5n-2Vy" firstAttribute="width" secondItem="caM-G6-BvL" secondAttribute="width" id="zXA-jk-gAD"/>
                         </constraints>
                     </stackView>
                 </subviews>
