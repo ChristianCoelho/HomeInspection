@@ -20,6 +20,7 @@ class CommentViewCell: UITableViewCell {
     @IBAction func statusToggle(_ sender: Any) {
         statusToggleAction?(self)
     }
+    @IBOutlet weak var buttonHiddenWidths: NSLayoutConstraint!
     
     // Closure variable for status switch toggle (set by table's controller during cell init)
     var statusToggleAction: ((CommentViewCell) -> Void)?

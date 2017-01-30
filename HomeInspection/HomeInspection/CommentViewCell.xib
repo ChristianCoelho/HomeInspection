@@ -33,47 +33,44 @@
                                 </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comment (placeholder)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oGc-LW-8LB">
-                                <rect key="frame" x="69" y="13.5" width="732" height="20.5"/>
+                                <rect key="frame" x="69" y="13.5" width="924" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="caM-G6-BvL">
-                                <rect key="frame" x="806" y="0.0" width="64" height="47.5"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="caM-G6-BvL">
+                                <rect key="frame" x="998" y="0.0" width="0.0" height="47.5"/>
                                 <color key="backgroundColor" white="0.40000000000000002" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="64" id="OGe-CR-oZo"/>
+                                    <constraint firstAttribute="width" priority="900" id="KMl-O8-xQi"/>
+                                    <constraint firstAttribute="width" priority="800" constant="64" id="OGe-CR-oZo"/>
                                 </constraints>
                                 <state key="normal" title="Add Notes">
                                     <color key="titleColor" cocoaTouchSystemColor="lightTextColor"/>
                                 </state>
                             </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="tbo-5n-2Vy">
-                                <rect key="frame" x="875" y="0.0" width="64" height="47.5"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="tbo-5n-2Vy">
+                                <rect key="frame" x="1003" y="0.0" width="0.0" height="47.5"/>
                                 <color key="backgroundColor" white="0.34999999999999998" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="64" id="UMx-1G-2mf"/>
-                                </constraints>
                                 <state key="normal" title="Add Flags">
                                     <color key="titleColor" cocoaTouchSystemColor="lightTextColor"/>
                                 </state>
                             </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="OPB-l2-QyI">
-                                <rect key="frame" x="944" y="0.0" width="64" height="47.5"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="OPB-l2-QyI">
+                                <rect key="frame" x="1008" y="0.0" width="0.0" height="47.5"/>
                                 <color key="backgroundColor" white="0.29999999999999999" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="64" id="7w7-lk-Qfw"/>
-                                </constraints>
                                 <state key="normal" title="Add Photo">
                                     <color key="titleColor" cocoaTouchSystemColor="lightTextColor"/>
                                 </state>
                             </button>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="tbo-5n-2Vy" firstAttribute="width" secondItem="caM-G6-BvL" secondAttribute="width" id="DPe-T5-nZ9"/>
                             <constraint firstItem="OPB-l2-QyI" firstAttribute="height" secondItem="caM-G6-BvL" secondAttribute="height" id="KZi-RY-cvw"/>
                             <constraint firstItem="tbo-5n-2Vy" firstAttribute="height" secondItem="caM-G6-BvL" secondAttribute="height" id="Kx6-A1-HZA"/>
                             <constraint firstAttribute="bottom" secondItem="caM-G6-BvL" secondAttribute="bottom" id="QPb-RC-hCM"/>
                             <constraint firstItem="caM-G6-BvL" firstAttribute="top" secondItem="j41-AR-iLE" secondAttribute="top" id="Ty6-Wr-lTe"/>
+                            <constraint firstItem="OPB-l2-QyI" firstAttribute="width" secondItem="caM-G6-BvL" secondAttribute="width" id="s2V-61-Tdi"/>
                         </constraints>
                     </stackView>
                 </subviews>
@@ -86,6 +83,7 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="buttonHiddenWidths" destination="KMl-O8-xQi" id="uFf-a0-j6a"/>
                 <outlet property="commentFlagsButton" destination="tbo-5n-2Vy" id="n8W-Kc-AuQ"/>
                 <outlet property="commentLabel" destination="oGc-LW-8LB" id="uF1-bW-zg7"/>
                 <outlet property="commentNotesButton" destination="caM-G6-BvL" id="lEN-hy-hix"/>

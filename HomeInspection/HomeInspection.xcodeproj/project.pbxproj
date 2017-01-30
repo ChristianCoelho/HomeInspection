@@ -21,6 +21,7 @@
 		412FA1041E2715E200DE6BB9 /* StateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412FA1031E2715E200DE6BB9 /* StateController.swift */; };
 		412FA1121E271ABD00DE6BB9 /* LookupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412FA1111E271ABD00DE6BB9 /* LookupViewController.swift */; };
 		412FA1141E27200100DE6BB9 /* InspDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412FA1131E27200100DE6BB9 /* InspDetailsViewController.swift */; };
+		4172AE1D1E3EFA5300A8A80E /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4172AE1C1E3EFA5300A8A80E /* Result.swift */; };
 		41C5B7961DF8F8E2002D5D0B /* PaneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C5B7951DF8F8E2002D5D0B /* PaneViewController.swift */; };
 		41E047C51E27F1F000E6804B /* PaneTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E047C41E27F1F000E6804B /* PaneTableViewCell.swift */; };
 		41E047C71E27F22900E6804B /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E047C61E27F22900E6804B /* DashboardView.swift */; };
@@ -71,6 +72,7 @@
 		412FA1031E2715E200DE6BB9 /* StateController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StateController.swift; sourceTree = "<group>"; };
 		412FA1111E271ABD00DE6BB9 /* LookupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LookupViewController.swift; sourceTree = "<group>"; };
 		412FA1131E27200100DE6BB9 /* InspDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InspDetailsViewController.swift; sourceTree = "<group>"; };
+		4172AE1C1E3EFA5300A8A80E /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		41C5B7951DF8F8E2002D5D0B /* PaneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaneViewController.swift; sourceTree = "<group>"; };
 		41E047C41E27F1F000E6804B /* PaneTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaneTableViewCell.swift; sourceTree = "<group>"; };
 		41E047C61E27F22900E6804B /* DashboardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
@@ -217,6 +219,7 @@
 			children = (
 				41E047D21E27FCFB00E6804B /* Comment.swift */,
 				41E4E5621E2822630043B57F /* SubSection.swift */,
+				4172AE1C1E3EFA5300A8A80E /* Result.swift */,
 			);
 			name = "Data Models";
 			sourceTree = "<group>";
@@ -374,6 +377,7 @@
 				412FA1141E27200100DE6BB9 /* InspDetailsViewController.swift in Sources */,
 				41243D4E1DF88AC5007747C3 /* DashboardViewController.swift in Sources */,
 				412C45391E3C51C800D713D6 /* CommentViewCell.swift in Sources */,
+				4172AE1D1E3EFA5300A8A80E /* Result.swift in Sources */,
 				41E047C71E27F22900E6804B /* DashboardView.swift in Sources */,
 				412FA1041E2715E200DE6BB9 /* StateController.swift in Sources */,
 				41C5B7961DF8F8E2002D5D0B /* PaneViewController.swift in Sources */,

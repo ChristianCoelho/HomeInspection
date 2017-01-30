@@ -106,12 +106,13 @@ class SubSectionTableViewController: UITableViewController {
             commentCell.commentLabel.text = "Comment \(indexPath.row)"
             commentCell.statusToggleAction = { (commentCell) in
                 let isOn = commentCell.commentStatus.isOn
-                commentCell.commentNotesButton.isEnabled = isOn
-                commentCell.commentFlagsButton.isEnabled = isOn
-                commentCell.commentPhotoButton.isEnabled = isOn
-                commentCell.commentNotesButton.isHidden = !isOn
-                commentCell.commentFlagsButton.isHidden = !isOn
-                commentCell.commentPhotoButton.isHidden = !isOn
+                //commentCell.commentNotesButton.isEnabled = isOn
+                //commentCell.commentFlagsButton.isEnabled = isOn
+                //commentCell.commentPhotoButton.isEnabled = isOn
+                //commentCell.commentNotesButton.isHidden = !isOn
+                //commentCell.commentFlagsButton.isHidden = !isOn
+                //commentCell.commentPhotoButton.isHidden = !isOn
+                commentCell.buttonHiddenWidths.priority = isOn ? 250 : 900
             }
             
             return commentCell
