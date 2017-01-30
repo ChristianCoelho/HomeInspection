@@ -8,13 +8,29 @@
 
 import UIKit
 
+
+
+protocol ResultDataDelegate {
+    func userChangedSeverity(resultId: Int32, severity: Int8) -> Int8
+    func userChangedNote(resultId: Int32, note: String) -> String
+    func userChangedPhoto(resultId: Int32, photoPath: String) -> String
+    func userChangedFlags(resultId: Int32, flagNums: [Int8]) -> [Int8]
+}
+
+
+
 class SubSectionTableViewController: UITableViewController {
 
-    // MARK: - Properties
-    var subSections = [SubSection]()
-
-    var numReuses = 0
     
+    
+    // Properties
+    var subSections = [SubSection]()
+    var numReuses = 0
+    var stateDelegate: ResultDataDelegate? = nil
+    
+    
+    
+    // Functions
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -41,9 +57,6 @@ class SubSectionTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    // MARK: - Table view data source
-
-    
     /* Set the number of section in the table
      * (= number of subsections for the chosen section)
      */
@@ -52,7 +65,6 @@ class SubSectionTableViewController: UITableViewController {
         return subSections.count
     }
 
-    
     /* Set the number of rows per section
      * (Comments in a subsection + 1 for the subsection header)
      */
@@ -61,7 +73,6 @@ class SubSectionTableViewController: UITableViewController {
         return 5
     }
 
-    
     /* Initialize Table Cells */
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
@@ -103,16 +114,14 @@ class SubSectionTableViewController: UITableViewController {
             let commentCell = cell as! CommentViewCell
             
             // Initialize comment cell values
-            commentCell.commentLabel.text = "Comment \(indexPath.row)"
+            commentCell.commentTextButton.titleLabel?.text = "Comment \(indexPath.row)"
             commentCell.statusToggleAction = { (commentCell) in
                 let isOn = commentCell.commentStatus.isOn
-                //commentCell.commentNotesButton.isEnabled = isOn
-                //commentCell.commentFlagsButton.isEnabled = isOn
-                //commentCell.commentPhotoButton.isEnabled = isOn
-                //commentCell.commentNotesButton.isHidden = !isOn
-                //commentCell.commentFlagsButton.isHidden = !isOn
-                //commentCell.commentPhotoButton.isHidden = !isOn
                 commentCell.buttonHiddenWidths.priority = isOn ? 250 : 900
+                commentCell.commentTextButton.isEnabled = isOn
+            }
+            commentCell.commentTextButtonTapAction = { (commentCell) in
+                print("Comment Tapped")
             }
             
             return commentCell
@@ -132,18 +141,9 @@ class SubSectionTableViewController: UITableViewController {
     }
     
     
-    // MARK - Event Handlers
     
-    func commentStatusChanged(cell: CommentViewCell) -> Void {
-        let isOn = cell.commentStatus.isOn
-        cell.commentNotesButton.isEnabled = isOn
-        cell.commentFlagsButton.isEnabled = isOn
-        cell.commentPhotoButton.isEnabled = isOn
-        cell.commentNotesButton.isHidden = !isOn
-        cell.commentFlagsButton.isHidden = !isOn
-        cell.commentPhotoButton.isHidden = !isOn
-    }
-    
+    // Event Handlers
+
     
     
     

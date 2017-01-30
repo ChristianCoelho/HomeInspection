@@ -56,9 +56,6 @@
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1eY-FL-KbN">
                                                 <rect key="frame" x="0.0" y="32.5" width="51" height="31"/>
                                                 <color key="onTintColor" red="0.0" green="0.39011696099999998" blue="0.78802083329999995" alpha="1" colorSpace="calibratedRGB"/>
-                                                <connections>
-                                                    <action selector="statusToggled:" destination="KGk-i7-Jjw" eventType="valueChanged" id="4zi-qm-s2f"/>
-                                                </connections>
                                             </switch>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status (placeholder)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LK0-YZ-AuK">
                                                 <rect key="frame" x="69" y="37.5" width="597" height="20.5"/>
