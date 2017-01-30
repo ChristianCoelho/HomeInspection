@@ -22,6 +22,7 @@
 		412FA1121E271ABD00DE6BB9 /* LookupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412FA1111E271ABD00DE6BB9 /* LookupViewController.swift */; };
 		412FA1141E27200100DE6BB9 /* InspDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412FA1131E27200100DE6BB9 /* InspDetailsViewController.swift */; };
 		4172AE1D1E3EFA5300A8A80E /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4172AE1C1E3EFA5300A8A80E /* Result.swift */; };
+		4172AE1F1E3F3D4A00A8A80E /* InspectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4172AE1E1E3F3D4A00A8A80E /* InspectionViewController.swift */; };
 		41C5B7961DF8F8E2002D5D0B /* PaneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C5B7951DF8F8E2002D5D0B /* PaneViewController.swift */; };
 		41E047C51E27F1F000E6804B /* PaneTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E047C41E27F1F000E6804B /* PaneTableViewCell.swift */; };
 		41E047C71E27F22900E6804B /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E047C61E27F22900E6804B /* DashboardView.swift */; };
@@ -73,6 +74,7 @@
 		412FA1111E271ABD00DE6BB9 /* LookupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LookupViewController.swift; sourceTree = "<group>"; };
 		412FA1131E27200100DE6BB9 /* InspDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InspDetailsViewController.swift; sourceTree = "<group>"; };
 		4172AE1C1E3EFA5300A8A80E /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		4172AE1E1E3F3D4A00A8A80E /* InspectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InspectionViewController.swift; sourceTree = "<group>"; };
 		41C5B7951DF8F8E2002D5D0B /* PaneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaneViewController.swift; sourceTree = "<group>"; };
 		41E047C41E27F1F000E6804B /* PaneTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaneTableViewCell.swift; sourceTree = "<group>"; };
 		41E047C61E27F22900E6804B /* DashboardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
@@ -205,6 +207,7 @@
 		412C45181E3C12AF00D713D6 /* Inspection Page */ = {
 			isa = PBXGroup;
 			children = (
+				4172AE1E1E3F3D4A00A8A80E /* InspectionViewController.swift */,
 				41E047DF1E2805ED00E6804B /* SubSectionTableViewController.swift */,
 				412C45331E3C4F5000D713D6 /* SubSectionHeaderViewCell.swift */,
 				412C45341E3C4F5000D713D6 /* SubSectionHeaderViewCell.xib */,
@@ -380,6 +383,7 @@
 				4172AE1D1E3EFA5300A8A80E /* Result.swift in Sources */,
 				41E047C71E27F22900E6804B /* DashboardView.swift in Sources */,
 				412FA1041E2715E200DE6BB9 /* StateController.swift in Sources */,
+				4172AE1F1E3F3D4A00A8A80E /* InspectionViewController.swift in Sources */,
 				41C5B7961DF8F8E2002D5D0B /* PaneViewController.swift in Sources */,
 				41E047CF1E27F27A00E6804B /* InspDetailsView.swift in Sources */,
 				41E047D31E27FCFB00E6804B /* Comment.swift in Sources */,

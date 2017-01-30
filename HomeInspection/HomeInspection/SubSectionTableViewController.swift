@@ -11,7 +11,9 @@ import UIKit
 
 
 protocol ResultDataDelegate {
-    func userChangedSeverity(resultId: Int32, severity: Int8) -> Int8
+    func userAddedResult(commentId: Int32) -> Int32
+    func userRemovedResult(resultId: Int32) -> Int32
+    func userChangedSeverity(resultId: Int32) -> Int8
     func userChangedNote(resultId: Int32, note: String) -> String
     func userChangedPhoto(resultId: Int32, photoPath: String) -> String
     func userChangedFlags(resultId: Int32, flagNums: [Int8]) -> [Int8]
@@ -26,7 +28,7 @@ class SubSectionTableViewController: UITableViewController {
     // Properties
     var subSections = [SubSection]()
     var numReuses = 0
-    var stateDelegate: ResultDataDelegate? = nil
+    var resultsDelegate: StateController? = nil
     
     
     
@@ -114,14 +116,25 @@ class SubSectionTableViewController: UITableViewController {
             let commentCell = cell as! CommentViewCell
             
             // Initialize comment cell values
-            commentCell.commentTextButton.titleLabel?.text = "Comment \(indexPath.row)"
+            commentCell.commentTextButton.setAttributedTitle(NSMutableAttributedString(string: "Comment \(indexPath.row)", attributes: commentCell.commentTextAttributes), for: .normal)
+            commentCell.commentId = 1
             commentCell.statusToggleAction = { (commentCell) in
+                if (commentCell.resultId == nil) {
+                    // Need to assign a comment id to the cell first...Then this creates and assigns the cell a resultId in the state controller's Reults array
+                    commentCell.resultId = self.resultsDelegate?.userAddedResult(commentId: commentCell.commentId!)
+                    
+                    print("New comment found. Added an entry at index \(commentCell.resultId!) in the Results Array")
+                }
+                
                 let isOn = commentCell.commentStatus.isOn
                 commentCell.buttonHiddenWidths.priority = isOn ? 250 : 900
                 commentCell.commentTextButton.isEnabled = isOn
+                
             }
             commentCell.commentTextButtonTapAction = { (commentCell) in
-                print("Comment Tapped")
+                let newSeverity = (self.resultsDelegate?.userChangedSeverity(resultId: commentCell.resultId!))!
+                print("Comment Tapped, updating severity for result \(commentCell.resultId!) to \(newSeverity)")
+                commentCell.updateSeverity(severity: newSeverity)
             }
             
             return commentCell

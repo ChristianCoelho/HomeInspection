@@ -28,6 +28,6 @@ class Result {
         
         self.flags = nil
         self.photoPath = nil
-        self.severity = -1;
+        self.severity = 0;
     }
 }

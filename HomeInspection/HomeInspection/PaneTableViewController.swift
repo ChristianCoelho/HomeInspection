@@ -1,4 +1,4 @@
-//
+//PaneTableViewController
 //  PaneTableViewController.swift
 //  HomeInspection
 //
@@ -10,6 +10,14 @@ import UIKit
 
 class PaneTableViewController: UITableViewController {
 
+    
+    
+    // Properties
+    var resultsDelegate: StateController? = nil
+    
+    
+    
+    // Other Functions
     override func viewDidLoad() {
         super.viewDidLoad()
 

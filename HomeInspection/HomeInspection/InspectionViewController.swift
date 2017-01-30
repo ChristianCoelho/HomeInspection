@@ -1,15 +1,15 @@
 //
-//  InspInfoViewController.swift
+//  InspectionViewController.swift
 //  HomeInspection
 //
-//  Created by Jared Speck on 1/11/17.
+//  Created by Jared Speck on 1/30/17.
 //  Copyright © 2017 Jared Speck. All rights reserved.
 //
 
 import UIKit
 
-class InspDetailsViewController: UIViewController {
-    
+class InspectionViewController: UIViewController {
+
     
     
     // Properties
@@ -20,32 +20,36 @@ class InspDetailsViewController: UIViewController {
     // Other Functions
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        // Do any additional setup after loading the view.
     }
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier == "showInspectionViewController") {
-            let inspectionVC: InspectionViewController = segue.destination as! InspectionViewController
+        if (segue.identifier == "embedInspectionTableViewController") {
+            let inspTableVC: SubSectionTableViewController = segue.destination as! SubSectionTableViewController
             
-            print("Passing resultsDelegate (StateController) from inspDetailsVC to inspectionVC")
+            print("Passing resultsDelegate (StateController) from inspectionVC to embedded inspectionTableVC")
             
-            inspectionVC.resultsDelegate = self.resultsDelegate
+            inspTableVC.resultsDelegate = self.resultsDelegate
         }
-        else if (segue.identifier == "embedPaneTableViewControllerInInspDetails") {
+        else if (segue.identifier == "embedPaneTableViewControllerInInspection") {
             let paneTableVC: PaneTableViewController = segue.destination as! PaneTableViewController
             
             if (paneTableVC.resultsDelegate == nil) {
-                print("Passing resultsDelegate (StateController) from inspDetailsVC to embedded paneTableVC")
-            
+                print("Passing resultsDelegate (StateController) from inspectionVC to embedded paneTableVC")
+                
                 paneTableVC.resultsDelegate = self.resultsDelegate
             }
         }
     }
     
-}
+    
 
+}

@@ -34,6 +34,7 @@
                             </switch>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oD8-Sb-FPN">
                                 <rect key="frame" x="69" y="9" width="923.5" height="30"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
                                 <state key="normal" title="comment (Placeholder)">
                                     <color key="titleColor" cocoaTouchSystemColor="lightTextColor"/>
                                 </state>
