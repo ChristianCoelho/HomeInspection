@@ -10,6 +10,14 @@ import UIKit
 
 class PaneViewController: UIViewController {
 
+    
+    
+    // Properties
+    var resultsDelegate: StateController? = nil
+    
+    
+    
+    // Other Functions
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,14 +30,17 @@ class PaneViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if (segue.identifier == "embedPaneTableViewController") {
+            let paneTableVC: PaneTableViewController = segue.destination as! PaneTableViewController
+            
+            if (paneTableVC.resultsDelegate == nil) {
+                print("Passing resultsDelegate (StateController) from paneVC to embedded paneTableVC")
+                
+                paneTableVC.resultsDelegate = self.resultsDelegate
+            }
+        }
     }
-    */
+ 
 
 }

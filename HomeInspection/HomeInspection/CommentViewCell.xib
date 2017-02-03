@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CommentViewCell" id="KGk-i7-Jjw" customClass="CommentViewCell" customModule="HomeInspection" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="1024" height="64"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="1024" height="64"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="j41-AR-iLE">
+                        <rect key="frame" x="8" y="8" width="1008" height="48"/>
+                        <subviews>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="l9P-qv-MA9">
+                                <rect key="frame" x="0.0" y="8" width="66" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="64" id="SIU-zb-hcb"/>
+                                </constraints>
+                                <color key="onTintColor" red="0.0" green="0.39011696099999998" blue="0.78802083329999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="statusToggle:" destination="KGk-i7-Jjw" eventType="valueChanged" id="trc-lS-MuU"/>
+                                </connections>
+                            </switch>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oD8-Sb-FPN">
+                                <rect key="frame" x="69" y="9" width="924" height="30"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                <state key="normal" title="comment (Placeholder)">
+                                    <color key="titleColor" cocoaTouchSystemColor="lightTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="commentTextButtonTap:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="IT7-eu-qwB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="caM-G6-BvL">
+                                <rect key="frame" x="998" y="0.0" width="0.0" height="48"/>
+                                <color key="backgroundColor" white="0.40000000000000002" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" priority="900" id="KMl-O8-xQi"/>
+                                    <constraint firstAttribute="width" priority="800" constant="64" id="OGe-CR-oZo"/>
+                                </constraints>
+                                <state key="normal" title="Add Notes">
+                                    <color key="titleColor" cocoaTouchSystemColor="lightTextColor"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="tbo-5n-2Vy">
+                                <rect key="frame" x="1003" y="0.0" width="0.0" height="48"/>
+                                <color key="backgroundColor" white="0.34999999999999998" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Add Flags">
+                                    <color key="titleColor" cocoaTouchSystemColor="lightTextColor"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="OPB-l2-QyI">
+                                <rect key="frame" x="1008" y="0.0" width="0.0" height="48"/>
+                                <color key="backgroundColor" white="0.29999999999999999" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Add Photo">
+                                    <color key="titleColor" cocoaTouchSystemColor="lightTextColor"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="tbo-5n-2Vy" firstAttribute="width" secondItem="caM-G6-BvL" secondAttribute="width" id="DPe-T5-nZ9"/>
+                            <constraint firstItem="OPB-l2-QyI" firstAttribute="height" secondItem="caM-G6-BvL" secondAttribute="height" id="KZi-RY-cvw"/>
+                            <constraint firstItem="tbo-5n-2Vy" firstAttribute="height" secondItem="caM-G6-BvL" secondAttribute="height" id="Kx6-A1-HZA"/>
+                            <constraint firstAttribute="bottom" secondItem="caM-G6-BvL" secondAttribute="bottom" id="QPb-RC-hCM"/>
+                            <constraint firstItem="caM-G6-BvL" firstAttribute="top" secondItem="j41-AR-iLE" secondAttribute="top" id="Ty6-Wr-lTe"/>
+                            <constraint firstItem="OPB-l2-QyI" firstAttribute="width" secondItem="caM-G6-BvL" secondAttribute="width" id="s2V-61-Tdi"/>
+                        </constraints>
+                    </stackView>
+                </subviews>
+                <color key="backgroundColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                <constraints>
+                    <constraint firstAttribute="bottomMargin" secondItem="j41-AR-iLE" secondAttribute="bottom" id="0nx-4A-z6l"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="j41-AR-iLE" secondAttribute="trailing" id="3Lu-q1-LL7"/>
+                    <constraint firstItem="j41-AR-iLE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="9IK-Dw-wxK"/>
+                    <constraint firstItem="j41-AR-iLE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="qhg-0q-Nf8"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="buttonHiddenWidths" destination="KMl-O8-xQi" id="uFf-a0-j6a"/>
+                <outlet property="commentFlagsButton" destination="tbo-5n-2Vy" id="n8W-Kc-AuQ"/>
+                <outlet property="commentNotesButton" destination="caM-G6-BvL" id="lEN-hy-hix"/>
+                <outlet property="commentPhotoButton" destination="OPB-l2-QyI" id="Rab-hM-dr3"/>
+                <outlet property="commentStatus" destination="l9P-qv-MA9" id="8Sd-l0-2fa"/>
+                <outlet property="commentTextButton" destination="oD8-Sb-FPN" id="BJa-vE-d62"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>
