@@ -11,14 +11,25 @@ import UIKit
 class Comment {
     
     //MARK: Properties
-    var comText: String!
-    var severity: Int8!
+    private var commentId: Int!
+    private var subSectionId: Int!
+    private var sectionId: Int!
+    private var defaultFlags: [Int8]!
+    
+    // Read only
+    private(set) var commentText: String!
+    private(set) var rank: Int?
+    private(set) var active: Bool! = false
  
     //MARK: Initialization
-    init!(comText: String!, severity: Int8!) {
+    init!(commentId: Int!, subSectionId: Int!, section: Int!, commentText: String!, defaultFlags: [Int8]!, active: Bool) {
  
         // Initialize comment properties
-        self.comText = comText
-        self.severity = severity
+        self.commentId = commentId
+        self.subSectionId = subSectionId
+        self.commentText = commentText
+        self.defaultFlags = defaultFlags
+        self.active = active
+    
     }
 }

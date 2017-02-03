@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		41072BC91E444991003D3A88 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41072BC81E444991003D3A88 /* Section.swift */; };
 		41243D4C1DF88AC5007747C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41243D4B1DF88AC5007747C3 /* AppDelegate.swift */; };
 		41243D4E1DF88AC5007747C3 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41243D4D1DF88AC5007747C3 /* DashboardViewController.swift */; };
 		41243D511DF88AC5007747C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41243D4F1DF88AC5007747C3 /* Main.storyboard */; };
@@ -31,7 +32,7 @@
 		41E047CF1E27F27A00E6804B /* InspDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E047CE1E27F27A00E6804B /* InspDetailsView.swift */; };
 		41E047D31E27FCFB00E6804B /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E047D21E27FCFB00E6804B /* Comment.swift */; };
 		41E047D71E28002F00E6804B /* PaneTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E047D61E28002F00E6804B /* PaneTableViewController.swift */; };
-		41E047E01E2805ED00E6804B /* SubSectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E047DF1E2805ED00E6804B /* SubSectionTableViewController.swift */; };
+		41E047E01E2805ED00E6804B /* InspectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E047DF1E2805ED00E6804B /* InspectionTableViewController.swift */; };
 		41E4E5631E2822630043B57F /* SubSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E4E5621E2822630043B57F /* SubSection.swift */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +54,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		41072BC81E444991003D3A88 /* Section.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
 		41243D481DF88AC5007747C3 /* HomeInspection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeInspection.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41243D4B1DF88AC5007747C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		41243D4D1DF88AC5007747C3 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
@@ -83,7 +85,7 @@
 		41E047CE1E27F27A00E6804B /* InspDetailsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InspDetailsView.swift; sourceTree = "<group>"; };
 		41E047D21E27FCFB00E6804B /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		41E047D61E28002F00E6804B /* PaneTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaneTableViewController.swift; sourceTree = "<group>"; };
-		41E047DF1E2805ED00E6804B /* SubSectionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubSectionTableViewController.swift; sourceTree = "<group>"; };
+		41E047DF1E2805ED00E6804B /* InspectionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InspectionTableViewController.swift; sourceTree = "<group>"; };
 		41E4E5621E2822630043B57F /* SubSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubSection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -208,7 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				4172AE1E1E3F3D4A00A8A80E /* InspectionViewController.swift */,
-				41E047DF1E2805ED00E6804B /* SubSectionTableViewController.swift */,
+				41E047DF1E2805ED00E6804B /* InspectionTableViewController.swift */,
 				412C45331E3C4F5000D713D6 /* SubSectionHeaderViewCell.swift */,
 				412C45341E3C4F5000D713D6 /* SubSectionHeaderViewCell.xib */,
 				412C45371E3C51C800D713D6 /* CommentViewCell.swift */,
@@ -222,6 +224,7 @@
 			children = (
 				41E047D21E27FCFB00E6804B /* Comment.swift */,
 				41E4E5621E2822630043B57F /* SubSection.swift */,
+				41072BC81E444991003D3A88 /* Section.swift */,
 				4172AE1C1E3EFA5300A8A80E /* Result.swift */,
 			);
 			name = "Data Models";
@@ -379,6 +382,7 @@
 				41E047C51E27F1F000E6804B /* PaneTableViewCell.swift in Sources */,
 				412FA1141E27200100DE6BB9 /* InspDetailsViewController.swift in Sources */,
 				41243D4E1DF88AC5007747C3 /* DashboardViewController.swift in Sources */,
+				41072BC91E444991003D3A88 /* Section.swift in Sources */,
 				412C45391E3C51C800D713D6 /* CommentViewCell.swift in Sources */,
 				4172AE1D1E3EFA5300A8A80E /* Result.swift in Sources */,
 				41E047C71E27F22900E6804B /* DashboardView.swift in Sources */,
@@ -391,7 +395,7 @@
 				41E4E5631E2822630043B57F /* SubSection.swift in Sources */,
 				412C45351E3C4F5000D713D6 /* SubSectionHeaderViewCell.swift in Sources */,
 				41243D4C1DF88AC5007747C3 /* AppDelegate.swift in Sources */,
-				41E047E01E2805ED00E6804B /* SubSectionTableViewController.swift in Sources */,
+				41E047E01E2805ED00E6804B /* InspectionTableViewController.swift in Sources */,
 				41E047D71E28002F00E6804B /* PaneTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

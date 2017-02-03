@@ -28,24 +28,6 @@ class InspDetailsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier == "showInspectionViewController") {
-            let inspectionVC: InspectionViewController = segue.destination as! InspectionViewController
-            
-            print("Passing resultsDelegate (StateController) from inspDetailsVC to inspectionVC")
-            
-            inspectionVC.resultsDelegate = self.resultsDelegate
-        }
-        else if (segue.identifier == "embedPaneTableViewControllerInInspDetails") {
-            let paneTableVC: PaneTableViewController = segue.destination as! PaneTableViewController
-            
-            if (paneTableVC.resultsDelegate == nil) {
-                print("Passing resultsDelegate (StateController) from inspDetailsVC to embedded paneTableVC")
-            
-                paneTableVC.resultsDelegate = self.resultsDelegate
-            }
-        }
-    }
     
 }
 

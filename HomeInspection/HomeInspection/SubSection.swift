@@ -12,14 +12,16 @@ class SubSection {
 
     // MARK: - Properties
     var subSectionId: Int!
-    var commentIds: [Int]!
+    var sectionId: Int!
+    var subSectionName: String!
     
     // MARK: - Initializer
-    init!(subSectionId: Int!, commentIds: [Int]!) {
+    init!(subSectionId: Int!, name: String!, sectionId: Int!) {
             
         // Initialize properties with given values
         self.subSectionId = subSectionId
-        self.commentIds = commentIds
+        self.subSectionName = name
+        self.sectionId = sectionId
     }
 
 }

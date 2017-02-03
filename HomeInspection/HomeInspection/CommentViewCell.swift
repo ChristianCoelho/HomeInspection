@@ -24,9 +24,11 @@ class CommentViewCell: UITableViewCell {
     @IBOutlet weak var commentNotesButton: UIButton!
     @IBOutlet weak var commentFlagsButton: UIButton!
     @IBOutlet weak var commentPhotoButton: UIButton!
+    
     @IBAction func statusToggle(_ sender: Any) {
         statusToggleAction?(self)
     }
+    
     @IBAction func commentTextButtonTap(_ sender: Any) {
         commentTextButtonTapAction?(self)
     }
@@ -35,6 +37,8 @@ class CommentViewCell: UITableViewCell {
     // Closure variable for cell events (set by table's controller during cell init)
     var statusToggleAction: ((CommentViewCell) -> Void)?
     var commentTextButtonTapAction: ((CommentViewCell) -> Void)?
+    
+    
     
     // Functions
     
