@@ -42,7 +42,7 @@ class PaneTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 12
+        return 8
     }
 
     
@@ -50,6 +50,7 @@ class PaneTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PaneCell", for: indexPath)
 
         // Configure the cell...
+        //cell.textLabel?.text = "Sample Section"
 
         return cell
     }

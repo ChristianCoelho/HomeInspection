@@ -27,6 +27,7 @@ class InspectionTableViewController: UITableViewController {
     
     /* Properties */
     
+    var sectionId: Int!
     var subSections = [SubSection]()
     var numReuses = 0
     
@@ -87,7 +88,7 @@ class InspectionTableViewController: UITableViewController {
         
         // Reuse old cell
         numReuses += 1
-        debugPrint("Reused \(numReuses) Cells")
+        //debugPrint("Reused \(numReuses) Cells")
         
         // Initialize the cell based off of identifier
         if (identifier == "SubSectionHeaderViewCell") {
@@ -133,16 +134,16 @@ class InspectionTableViewController: UITableViewController {
         cell.subSectionStatusLabel.text = "All clear for Subsection \(section + 1)"
     }
     
-    // Initializes subsection cells with values loaded from the state controller
+    // Initializes comment cells with values loaded from the state controller
     func initCommentCell(cell: CommentViewCell, section: Int, row: Int) {
         let state = StateController.state
         var commentText: String
         
         // Translates the cells location into a comment id
-        cell.commentId = Int32(state.getCommentId(section: 1, subSection: section + 2, row: row)!)
+        cell.commentId = Int32(state.getCommentId(section: 1, subSection: section + 1, row: row)!)
         
         // Gets the status of the comment with id commentId from the comment table
-        cell.commentStatus.setOn(state.getCommentState(commentId: Int(cell.commentId!)), animated: false)
+        //cell.commentStatus.setOn(state.getCommentState(commentId: Int(cell.commentId!)), animated: false)
         
         // Sets the comment addon button states based on the comment's status
         cell.buttonHiddenWidths.priority = cell.commentStatus.isOn ? 250 : 900

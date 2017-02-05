@@ -140,7 +140,7 @@
                                                     <constraint firstAttribute="width" constant="192" id="Zu7-BW-Tpa"/>
                                                 </constraints>
                                                 <connections>
-                                                    <segue destination="XVE-9u-RpD" kind="embed" id="ADe-vq-JL1"/>
+                                                    <segue destination="XVE-9u-RpD" kind="embed" identifier="embedPaneViewControllerInInspectionView" id="ADe-vq-JL1"/>
                                                 </connections>
                                             </containerView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jpS-SB-TsC">
@@ -150,49 +150,46 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="576" height="954"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c9m-pu-vm2">
-                                                                <rect key="frame" x="0.0" y="0.0" width="576" height="96"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="576" height="64"/>
                                                                 <subviews>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rVV-e5-SnB">
-                                                                        <rect key="frame" x="0.0" y="10" width="576" height="76"/>
+                                                                        <rect key="frame" x="0.0" y="10" width="576" height="44"/>
                                                                         <subviews>
                                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B9F-2x-23G">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="493.5" height="76"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="493.5" height="44"/>
                                                                                 <color key="backgroundColor" white="0.25" alpha="1" colorSpace="calibratedWhite"/>
-                                                                                <constraints>
-                                                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" secondItem="B9F-2x-23G" secondAttribute="height" id="4Fu-BM-uHP"/>
-                                                                                </constraints>
                                                                                 <state key="normal" title="SectionName">
                                                                                     <color key="titleColor" cocoaTouchSystemColor="lightTextColor"/>
                                                                                 </state>
                                                                             </button>
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kni-A0-jSM">
-                                                                                <rect key="frame" x="493.5" y="0.0" width="82.5" height="76"/>
+                                                                                <rect key="frame" x="493.5" y="0.0" width="82.5" height="44"/>
                                                                                 <subviews>
                                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="9lF-6I-oXY">
-                                                                                        <rect key="frame" x="0.0" y="0.0" width="82.5" height="76"/>
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="82.5" height="44"/>
                                                                                         <subviews>
                                                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cgl-4Y-fmZ">
-                                                                                                <rect key="frame" x="0.0" y="0.0" width="82.5" height="38"/>
+                                                                                                <rect key="frame" x="0.0" y="0.0" width="82.5" height="22"/>
                                                                                                 <color key="backgroundColor" white="0.29999999999999999" alpha="1" colorSpace="calibratedWhite"/>
                                                                                                 <state key="normal" title="Edit">
                                                                                                     <color key="titleColor" cocoaTouchSystemColor="lightTextColor"/>
                                                                                                 </state>
                                                                                             </button>
                                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nOb-4P-3Rl">
-                                                                                                <rect key="frame" x="0.0" y="38" width="82.5" height="38"/>
+                                                                                                <rect key="frame" x="0.0" y="22" width="82.5" height="22"/>
                                                                                                 <subviews>
                                                                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="yWc-O7-2RF">
-                                                                                                        <rect key="frame" x="0.0" y="0.0" width="82.5" height="38"/>
+                                                                                                        <rect key="frame" x="0.0" y="0.0" width="82.5" height="22"/>
                                                                                                         <subviews>
                                                                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zq2-F1-F2a">
-                                                                                                                <rect key="frame" x="0.0" y="0.0" width="41.5" height="38"/>
+                                                                                                                <rect key="frame" x="0.0" y="0.0" width="41.5" height="22"/>
                                                                                                                 <color key="backgroundColor" white="0.29999999999999999" alpha="1" colorSpace="calibratedWhite"/>
                                                                                                                 <state key="normal" title="+">
                                                                                                                     <color key="titleColor" cocoaTouchSystemColor="lightTextColor"/>
                                                                                                                 </state>
                                                                                                             </button>
                                                                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="382-xc-CGU">
-                                                                                                                <rect key="frame" x="41.5" y="0.0" width="41" height="38"/>
+                                                                                                                <rect key="frame" x="41.5" y="0.0" width="41" height="22"/>
                                                                                                                 <color key="backgroundColor" white="0.29999999999999999" alpha="1" colorSpace="calibratedWhite"/>
                                                                                                                 <state key="normal" title="-">
                                                                                                                     <color key="titleColor" cocoaTouchSystemColor="lightTextColor"/>
@@ -231,12 +228,12 @@
                                                                     <constraint firstItem="rVV-e5-SnB" firstAttribute="top" secondItem="c9m-pu-vm2" secondAttribute="top" constant="10" id="57o-DM-h8K"/>
                                                                     <constraint firstItem="rVV-e5-SnB" firstAttribute="leading" secondItem="c9m-pu-vm2" secondAttribute="leading" id="Cxs-Qb-kfl"/>
                                                                     <constraint firstAttribute="bottom" secondItem="rVV-e5-SnB" secondAttribute="bottom" constant="10" id="FYZ-FV-D1y"/>
-                                                                    <constraint firstAttribute="height" constant="96" id="P1y-8W-F2O"/>
+                                                                    <constraint firstAttribute="height" constant="64" id="P1y-8W-F2O"/>
                                                                     <constraint firstAttribute="trailing" secondItem="rVV-e5-SnB" secondAttribute="trailing" id="gZo-Fp-2c1"/>
                                                                 </constraints>
                                                             </view>
                                                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kTw-n7-Prk">
-                                                                <rect key="frame" x="0.0" y="96" width="576" height="858"/>
+                                                                <rect key="frame" x="0.0" y="64" width="576" height="890"/>
                                                                 <connections>
                                                                     <segue destination="4MX-ID-O2b" kind="embed" identifier="embedInspectionTableViewController" id="c3c-EL-Pkk"/>
                                                                 </connections>
@@ -265,6 +262,9 @@
                             <constraint firstItem="rXA-4S-PKC" firstAttribute="top" secondItem="g3n-dL-vYV" secondAttribute="bottom" id="uy3-wq-oF3"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="sectionNameButton" destination="B9F-2x-23G" id="4jk-t7-9rG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l3C-u5-d2w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -632,10 +632,10 @@
                                     <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mok-Rs-Iep">
+                                        <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mok-Rs-Iep">
                                             <rect key="frame" x="8" y="0.0" width="752" height="35.5"/>
                                             <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                            <state key="normal" title="Button">
+                                            <state key="normal" title="Sample Section">
                                                 <color key="titleColor" cocoaTouchSystemColor="lightTextColor"/>
                                             </state>
                                         </button>

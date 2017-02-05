@@ -78,13 +78,6 @@ class CommentViewCell: UITableViewCell {
             commentTextButton.setAttributedTitle(newText, for: .normal)
             break;
         case 2:
-            commentTextAttributes[NSUnderlineStyleAttributeName] = 0
-            commentTextAttributes[NSFontAttributeName] = UIFont.boldSystemFont(ofSize: 16)
-            newText = NSMutableAttributedString(string: oldText, attributes: commentTextAttributes)
-            commentTextButton.setAttributedTitle(newText, for: .normal)
-            break;
-            
-        case 3:
             commentTextAttributes[NSUnderlineStyleAttributeName] = 1
             commentTextAttributes[NSFontAttributeName] = UIFont.boldSystemFont(ofSize: 16)
             newText = NSMutableAttributedString(string: oldText, attributes: commentTextAttributes)

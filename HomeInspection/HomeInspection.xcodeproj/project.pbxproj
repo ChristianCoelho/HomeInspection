@@ -12,7 +12,6 @@
 		41243D4E1DF88AC5007747C3 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41243D4D1DF88AC5007747C3 /* DashboardViewController.swift */; };
 		41243D511DF88AC5007747C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41243D4F1DF88AC5007747C3 /* Main.storyboard */; };
 		41243D531DF88AC5007747C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41243D521DF88AC5007747C3 /* Assets.xcassets */; };
-		41243D561DF88AC5007747C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41243D541DF88AC5007747C3 /* LaunchScreen.storyboard */; };
 		41243D611DF88AC6007747C3 /* HomeInspectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41243D601DF88AC6007747C3 /* HomeInspectionTests.swift */; };
 		41243D6C1DF88AC6007747C3 /* HomeInspectionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41243D6B1DF88AC6007747C3 /* HomeInspectionUITests.swift */; };
 		412C45351E3C4F5000D713D6 /* SubSectionHeaderViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412C45331E3C4F5000D713D6 /* SubSectionHeaderViewCell.swift */; };
@@ -60,7 +59,6 @@
 		41243D4D1DF88AC5007747C3 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		41243D501DF88AC5007747C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		41243D521DF88AC5007747C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		41243D551DF88AC5007747C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		41243D571DF88AC6007747C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		41243D5C1DF88AC6007747C3 /* HomeInspectionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HomeInspectionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		41243D601DF88AC6007747C3 /* HomeInspectionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInspectionTests.swift; sourceTree = "<group>"; };
@@ -233,7 +231,6 @@
 		41E047DE1E28011900E6804B /* Other Stuff */ = {
 			isa = PBXGroup;
 			children = (
-				41243D541DF88AC5007747C3 /* LaunchScreen.storyboard */,
 				41243D521DF88AC5007747C3 /* Assets.xcassets */,
 				41243D4B1DF88AC5007747C3 /* AppDelegate.swift */,
 				41243D571DF88AC6007747C3 /* Info.plist */,
@@ -309,6 +306,7 @@
 				TargetAttributes = {
 					41243D471DF88AC5007747C3 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = HA29F8VU9D;
 						ProvisioningStyle = Automatic;
 					};
 					41243D5B1DF88AC6007747C3 = {
@@ -349,7 +347,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				412C45361E3C4F5000D713D6 /* SubSectionHeaderViewCell.xib in Resources */,
-				41243D561DF88AC5007747C3 /* LaunchScreen.storyboard in Resources */,
 				41243D531DF88AC5007747C3 /* Assets.xcassets in Resources */,
 				412C453A1E3C51C800D713D6 /* CommentViewCell.xib in Resources */,
 				41243D511DF88AC5007747C3 /* Main.storyboard in Resources */,
@@ -438,14 +435,6 @@
 				41243D501DF88AC5007747C3 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		41243D541DF88AC5007747C3 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				41243D551DF88AC5007747C3 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -551,6 +540,8 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = HA29F8VU9D;
 				INFOPLIST_FILE = HomeInspection/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Capstone.HomeInspection;
@@ -564,6 +555,8 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = HA29F8VU9D;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INFOPLIST_FILE = HomeInspection/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
