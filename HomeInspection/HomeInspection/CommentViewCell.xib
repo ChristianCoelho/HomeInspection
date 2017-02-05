@@ -20,10 +20,10 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="j41-AR-iLE">
-                        <rect key="frame" x="8" y="8" width="1008" height="48"/>
+                        <rect key="frame" x="8" y="2.5" width="1013.5" height="58.5"/>
                         <subviews>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="l9P-qv-MA9">
-                                <rect key="frame" x="0.0" y="8" width="66" height="31"/>
+                                <rect key="frame" x="0.0" y="14" width="66" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="64" id="SIU-zb-hcb"/>
                                 </constraints>
@@ -33,7 +33,7 @@
                                 </connections>
                             </switch>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oD8-Sb-FPN">
-                                <rect key="frame" x="69" y="9" width="924" height="30"/>
+                                <rect key="frame" x="69" y="14.5" width="929.5" height="30"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
                                 <state key="normal" title="comment (Placeholder)">
                                     <color key="titleColor" cocoaTouchSystemColor="lightTextColor"/>
@@ -43,7 +43,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="caM-G6-BvL">
-                                <rect key="frame" x="998" y="0.0" width="0.0" height="48"/>
+                                <rect key="frame" x="1003.5" y="0.0" width="0.0" height="58.5"/>
                                 <color key="backgroundColor" white="0.40000000000000002" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" priority="900" id="KMl-O8-xQi"/>
@@ -54,14 +54,14 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="tbo-5n-2Vy">
-                                <rect key="frame" x="1003" y="0.0" width="0.0" height="48"/>
+                                <rect key="frame" x="1008.5" y="0.0" width="0.0" height="58.5"/>
                                 <color key="backgroundColor" white="0.34999999999999998" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Add Flags">
                                     <color key="titleColor" cocoaTouchSystemColor="lightTextColor"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="OPB-l2-QyI">
-                                <rect key="frame" x="1008" y="0.0" width="0.0" height="48"/>
+                                <rect key="frame" x="1013.5" y="0.0" width="0.0" height="58.5"/>
                                 <color key="backgroundColor" white="0.29999999999999999" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Add Photo">
                                     <color key="titleColor" cocoaTouchSystemColor="lightTextColor"/>
@@ -80,9 +80,9 @@
                 </subviews>
                 <color key="backgroundColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                 <constraints>
-                    <constraint firstAttribute="bottomMargin" secondItem="j41-AR-iLE" secondAttribute="bottom" id="0nx-4A-z6l"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="j41-AR-iLE" secondAttribute="trailing" id="3Lu-q1-LL7"/>
-                    <constraint firstItem="j41-AR-iLE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="9IK-Dw-wxK"/>
+                    <constraint firstAttribute="bottom" secondItem="j41-AR-iLE" secondAttribute="bottom" constant="2.5" id="0nx-4A-z6l"/>
+                    <constraint firstAttribute="trailing" secondItem="j41-AR-iLE" secondAttribute="trailing" constant="2.5" id="3Lu-q1-LL7"/>
+                    <constraint firstItem="j41-AR-iLE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="2.5" id="9IK-Dw-wxK"/>
                     <constraint firstItem="j41-AR-iLE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="qhg-0q-Nf8"/>
                 </constraints>
             </tableViewCellContentView>

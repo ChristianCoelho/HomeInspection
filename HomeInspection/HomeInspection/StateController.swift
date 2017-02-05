@@ -21,9 +21,10 @@ class StateController {
     
     // Default initializer - Hidden to prevent reinitializing state. If one needs to load new values, use the loadState function (not implemented yet).
     private init() {
-        loadInitialComments();
-        loadInitialSubSections();
+        
         loadInitialSections();
+        loadInitialSubSections();
+        loadInitialComments();
     }
     
     
@@ -40,16 +41,16 @@ class StateController {
     private var results = [Result]()
     
     // List of all section names with unique sectionId
-    private var sections = [Section]()
+    private(set) var sections = [Section]()
     
     // List of all subsection names with unique subSectionId
-    private var subsections = [SubSection]()
+    private(set) var subsections = [SubSection]()
     
     // List of all comments with unique commentId
-    private var comments = [Comment]()
+    private(set) var comments = [Comment]()
     
     // Mapping for section num, subsection num, and comment num in a subsection to a single commentId. NEED TO FIX MAPPING FUNCTION THAT FILLS THESE IN CORRECTLY
-    private var commentIds = [[[Int]]](repeating: ([[Int]](repeating: ([Int](repeating: 1, count: 30)), count: 20)), count: 10)
+    private var commentIds = [[[Int]]]()
     
     /* End of Properties */
     
@@ -75,9 +76,9 @@ class StateController {
         // Not sure what to return here for error checking yet. Removing might totally break array indexing as the array collapses down, but the ids dont update to match
         return 1
     }
-    // Adds one to the severity and modulos the result by 4. Returns the new severity value
+    // Adds one to the severity and modulo's the result by 3. Returns the new severity value
     func userChangedSeverity(resultId: Int32) -> Int8 {
-        self.results[Int(resultId)].severity = (self.results[Int(resultId)].severity + 1) % 4
+        self.results[Int(resultId)].severity = (self.results[Int(resultId)].severity + 1) % 3
         return self.results[Int(resultId)].severity
     }
     
@@ -95,18 +96,35 @@ class StateController {
     
     // Translates the cells location into a comment id
     func getCommentId(section: Int, subSection: Int, row: Int) -> Int? {
-        return commentIds[section][subSection][row];
+        return row//commentIds[section][subSection][row];
     }
     
     // Gets the status of the comment with id commentId from the comment table
     func getCommentState(commentId: Int) -> Bool {
-        return comments[commentId].active;
+        return false//comments[commentId].active;
     }
     
     func getCommentText(commentId: Int) -> String {
         return comments[commentId].commentText
     }
     
+    func getSection(subSectionId: Int) -> Int {
+        print("getting section for subsection \(subSectionId)")
+        
+        return subsections[subSectionId].sectionId
+    }
+    
+    func addComment(newComment: Comment) {
+        self.comments.append(newComment)
+    }
+    
+    func addSubSection(newSubSection: SubSection) {
+        self.subsections.append(newSubSection)
+    }
+    
+    func addSection(newSection: Section) {
+        self.sections.append(newSection)
+    }
     // End of UI data transfer functions
     
     
@@ -122,6 +140,7 @@ class StateController {
      * Returns a positive id if successfully assigned a permanent id in the database
      */
     func mapCommentId(commentId: Int!, sectionNum: Int!, subSectionNum: Int!, rowNum: Int!) {
+        print("Mapping commentId: \(commentId!) to [\(sectionNum)][\(subSectionNum)][\(rowNum)]")
         commentIds[sectionNum][subSectionNum][rowNum] = commentId;
     }
     
@@ -130,24 +149,31 @@ class StateController {
         return -1;
     }
     
-    
     // Loads the initial comments into the comments table (reserved comments for use when adding notes if that is still the plan)
     func loadInitialComments() {
-        comments.append(Comment(commentId: 0, subSectionId: 0, section: 0, commentText: "", defaultFlags: [], active: true))
-        comments.append(Comment(commentId: 1, subSectionId: 1, section: 1, commentText: "Sample Comment 1: Bad driveway. Boooo", defaultFlags: [1, 2], active: false))
-        comments.append(Comment(commentId: 2, subSectionId: 2, section: 1, commentText: "Sample Comment 2: Ignore the next comment. It's a liar", defaultFlags: [2, 4], active: false))
-        comments.append(Comment(commentId: 3, subSectionId: 2, section: 1, commentText: "Sample Comment 3: Listen to the previous comment. It's the truth", defaultFlags: [3, 5], active: false))
+        comments.append(Comment(commentId: 0, subSectionId: 0, rank: 0, commentText: "", defaultFlags: [], active: true))
+        comments.append(Comment(commentId: 1, subSectionId: 1, rank: 0, commentText: "Sample Comment 1: Bad driveway. Boooo", defaultFlags: [1, 2], active: false))
+        comments.append(Comment(commentId: 2, subSectionId: 2, rank: 0, commentText: "Sample Comment 2: Ignore the next comment. It's a liar", defaultFlags: [2, 4], active: false))
+        comments.append(Comment(commentId: 3, subSectionId: 2, rank: 1, commentText: "Sample Comment 3: Listen to the previous comment. It's the truth", defaultFlags: [3, 5], active: false))
     }
     
     // Loads Sample subsections in for testing (This will be handled by the database integration code once implemented)
     func loadInitialSubSections() {
-        subsections.append(SubSection(subSectionId: 1, name: "Sample Sub: Driveway", sectionId: 1))
-        subsections.append(SubSection(subSectionId: 2, name: "Sample Sub: Paradox", sectionId: 1))
+        subsections.append(SubSection(subSectionId: 1, name: "Sample Sub: Driveway", sectionId: 2))
+        subsections.append(SubSection(subSectionId: 2, name: "Sample Sub: Paradox", sectionId: 2))
     }
     
     // Loads Sample sections in for testing (This will also be handled by the database integration code once implemented)
     func loadInitialSections() {
-        sections.append(Section(id: 1, name: "Sample Section: Grounds"))
+        sections.append(Section(id: 0, name: ""))
+        sections.append(Section(id: 1, name: "Bad Sample Section: Kitchen"))
+        sections.append(Section(id: 2, name: "Good Sample Section: Grounds"))
+        sections.append(Section(id: 3, name: "Sample Section 3"))
+        sections.append(Section(id: 4, name: "Sample Section 4"))
+        sections.append(Section(id: 5, name: "Sample Section 5"))
+        sections.append(Section(id: 6, name: "Sample Section 6"))
+        sections.append(Section(id: 7, name: "Sample Section 7"))
+        sections.append(Section(id: 8, name: "Sample Section 8"))
     }
     
     

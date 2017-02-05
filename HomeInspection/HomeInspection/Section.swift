@@ -16,9 +16,15 @@ class Section {
     var sectionId: Int!;
     var sectionName: String!;
     
+    var subSectionIds: [Int]!
     
     init(id: Int!, name: String!) {
+        
+        print("Addded section \(id!)")
+        
         self.sectionId = id
         self.sectionName = name
+        self.subSectionIds = [Int]()
     }
+    
 }
