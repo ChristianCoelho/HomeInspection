@@ -13,14 +13,22 @@ class InspectionViewController: UIViewController {
     
     
     // Properties
-    @IBOutlet weak var sectionNameButton: UIButton!
     var sectionId: Int! = 1
+    @IBOutlet weak var sectionLabel: UILabel!
     
+    
+    
+    func loadSection(sectionId: Int) {
+        let newSection = StateController.state.sections[sectionId]
+        sectionLabel.text = newSection.sectionName
+        
+        // ADD CODE TO LOAD SECTION/SUBSECTION/COMMENTS
+    }
     
     // Other Functions
     override func viewDidLoad() {
         super.viewDidLoad()
-        sectionNameButton.titleLabel?.text = StateController.state.sections[sectionId].sectionName
+        sectionLabel.text = StateController.state.sections[sectionId].sectionName
         // Do any additional setup after loading the view.
     }
 
@@ -35,6 +43,11 @@ class InspectionViewController: UIViewController {
             let inspTableVC = segue.destination as! InspectionTableViewController
             inspTableVC.sectionId = self.sectionId
             print("Passing sectionId: \(self.sectionId!) to Inspection Table")
+        }
+        else if (segue.identifier == "embedPaneViewControllerInInspectionView") {
+            let paneVC = segue.destination as! PaneViewController
+            paneVC.parentInpectionViewController = self
+            print("Passing InspectionVC reference to embedded PaneVC")
         }
     }
 }

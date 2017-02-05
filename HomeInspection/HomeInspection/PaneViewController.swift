@@ -10,14 +10,9 @@ import UIKit
 
 class PaneViewController: UIViewController {
 
-    
-    
-    // Properties
-    var resultsDelegate: StateController? = nil
-    
-    
-    
-    // Other Functions
+    var parentInpectionViewController: InspectionViewController!
+    var isInspectionLoaded: Bool = true
+        
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -30,17 +25,18 @@ class PaneViewController: UIViewController {
     }
     
 
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier == "embedPaneTableViewController") {
-            let paneTableVC: PaneTableViewController = segue.destination as! PaneTableViewController
-            
-            if (paneTableVC.resultsDelegate == nil) {
-                print("Passing resultsDelegate (StateController) from paneVC to embedded paneTableVC")
-                
-                paneTableVC.resultsDelegate = self.resultsDelegate
-            }
+        
+        if (segue.identifier == "embedTableInPaneView") {
+            let paneTableVC = segue.destination as! PaneTableViewController
+            paneTableVC.inspectionVC = self.parentInpectionViewController
+            paneTableVC.numSections = isInspectionLoaded ? StateController.state.sections.count - 1 : 0
+            print("Passing InspectionVC reference to embedded PaneTableVC")
         }
     }
- 
-
+    
 }

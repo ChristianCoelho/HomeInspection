@@ -150,46 +150,57 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="576" height="954"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c9m-pu-vm2">
-                                                                <rect key="frame" x="0.0" y="0.0" width="576" height="64"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="576" height="80"/>
                                                                 <subviews>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rVV-e5-SnB">
-                                                                        <rect key="frame" x="0.0" y="10" width="576" height="44"/>
+                                                                        <rect key="frame" x="0.0" y="8" width="576" height="64"/>
                                                                         <subviews>
-                                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B9F-2x-23G">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="493.5" height="44"/>
+                                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AlN-tw-sOg">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="493.5" height="64"/>
+                                                                                <subviews>
+                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C5c-ee-MiV">
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="493.5" height="64"/>
+                                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                                        <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                                                                        <nil key="highlightedColor"/>
+                                                                                    </label>
+                                                                                </subviews>
                                                                                 <color key="backgroundColor" white="0.25" alpha="1" colorSpace="calibratedWhite"/>
-                                                                                <state key="normal" title="SectionName">
-                                                                                    <color key="titleColor" cocoaTouchSystemColor="lightTextColor"/>
-                                                                                </state>
-                                                                            </button>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="trailing" secondItem="C5c-ee-MiV" secondAttribute="trailing" id="2xb-Bz-5Sh"/>
+                                                                                    <constraint firstItem="C5c-ee-MiV" firstAttribute="top" secondItem="AlN-tw-sOg" secondAttribute="top" id="KTt-Lw-Pqq"/>
+                                                                                    <constraint firstItem="C5c-ee-MiV" firstAttribute="leading" secondItem="AlN-tw-sOg" secondAttribute="leading" id="rjq-4P-58e"/>
+                                                                                    <constraint firstAttribute="bottom" secondItem="C5c-ee-MiV" secondAttribute="bottom" id="xGU-DC-dcw"/>
+                                                                                </constraints>
+                                                                            </view>
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kni-A0-jSM">
-                                                                                <rect key="frame" x="493.5" y="0.0" width="82.5" height="44"/>
+                                                                                <rect key="frame" x="493.5" y="0.0" width="82.5" height="64"/>
                                                                                 <subviews>
                                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="9lF-6I-oXY">
-                                                                                        <rect key="frame" x="0.0" y="0.0" width="82.5" height="44"/>
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="82.5" height="64"/>
                                                                                         <subviews>
                                                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cgl-4Y-fmZ">
-                                                                                                <rect key="frame" x="0.0" y="0.0" width="82.5" height="22"/>
+                                                                                                <rect key="frame" x="0.0" y="0.0" width="82.5" height="32"/>
                                                                                                 <color key="backgroundColor" white="0.29999999999999999" alpha="1" colorSpace="calibratedWhite"/>
                                                                                                 <state key="normal" title="Edit">
                                                                                                     <color key="titleColor" cocoaTouchSystemColor="lightTextColor"/>
                                                                                                 </state>
                                                                                             </button>
                                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nOb-4P-3Rl">
-                                                                                                <rect key="frame" x="0.0" y="22" width="82.5" height="22"/>
+                                                                                                <rect key="frame" x="0.0" y="32" width="82.5" height="32"/>
                                                                                                 <subviews>
                                                                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="yWc-O7-2RF">
-                                                                                                        <rect key="frame" x="0.0" y="0.0" width="82.5" height="22"/>
+                                                                                                        <rect key="frame" x="0.0" y="0.0" width="82.5" height="32"/>
                                                                                                         <subviews>
                                                                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zq2-F1-F2a">
-                                                                                                                <rect key="frame" x="0.0" y="0.0" width="41.5" height="22"/>
+                                                                                                                <rect key="frame" x="0.0" y="0.0" width="41.5" height="32"/>
                                                                                                                 <color key="backgroundColor" white="0.29999999999999999" alpha="1" colorSpace="calibratedWhite"/>
                                                                                                                 <state key="normal" title="+">
                                                                                                                     <color key="titleColor" cocoaTouchSystemColor="lightTextColor"/>
                                                                                                                 </state>
                                                                                                             </button>
                                                                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="382-xc-CGU">
-                                                                                                                <rect key="frame" x="41.5" y="0.0" width="41" height="22"/>
+                                                                                                                <rect key="frame" x="41.5" y="0.0" width="41" height="32"/>
                                                                                                                 <color key="backgroundColor" white="0.29999999999999999" alpha="1" colorSpace="calibratedWhite"/>
                                                                                                                 <state key="normal" title="-">
                                                                                                                     <color key="titleColor" cocoaTouchSystemColor="lightTextColor"/>
@@ -219,21 +230,21 @@
                                                                             </view>
                                                                         </subviews>
                                                                         <constraints>
-                                                                            <constraint firstItem="B9F-2x-23G" firstAttribute="width" secondItem="kni-A0-jSM" secondAttribute="width" multiplier="6" id="gYo-Zg-5s4"/>
+                                                                            <constraint firstItem="AlN-tw-sOg" firstAttribute="width" secondItem="kni-A0-jSM" secondAttribute="width" multiplier="6" id="SYm-Rg-0VV"/>
                                                                         </constraints>
                                                                     </stackView>
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="0.17999999999999999" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <constraints>
-                                                                    <constraint firstItem="rVV-e5-SnB" firstAttribute="top" secondItem="c9m-pu-vm2" secondAttribute="top" constant="10" id="57o-DM-h8K"/>
+                                                                    <constraint firstItem="rVV-e5-SnB" firstAttribute="top" secondItem="c9m-pu-vm2" secondAttribute="topMargin" id="57o-DM-h8K"/>
                                                                     <constraint firstItem="rVV-e5-SnB" firstAttribute="leading" secondItem="c9m-pu-vm2" secondAttribute="leading" id="Cxs-Qb-kfl"/>
-                                                                    <constraint firstAttribute="bottom" secondItem="rVV-e5-SnB" secondAttribute="bottom" constant="10" id="FYZ-FV-D1y"/>
-                                                                    <constraint firstAttribute="height" constant="64" id="P1y-8W-F2O"/>
+                                                                    <constraint firstAttribute="bottomMargin" secondItem="rVV-e5-SnB" secondAttribute="bottom" id="FYZ-FV-D1y"/>
+                                                                    <constraint firstAttribute="height" constant="80" id="P1y-8W-F2O"/>
                                                                     <constraint firstAttribute="trailing" secondItem="rVV-e5-SnB" secondAttribute="trailing" id="gZo-Fp-2c1"/>
                                                                 </constraints>
                                                             </view>
                                                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kTw-n7-Prk">
-                                                                <rect key="frame" x="0.0" y="64" width="576" height="890"/>
+                                                                <rect key="frame" x="0.0" y="80" width="576" height="874"/>
                                                                 <connections>
                                                                     <segue destination="4MX-ID-O2b" kind="embed" identifier="embedInspectionTableViewController" id="c3c-EL-Pkk"/>
                                                                 </connections>
@@ -263,7 +274,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="sectionNameButton" destination="B9F-2x-23G" id="4jk-t7-9rG"/>
+                        <outlet property="sectionLabel" destination="C5c-ee-MiV" id="zTs-05-don"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l3C-u5-d2w" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -363,7 +374,7 @@
                         <viewControllerLayoutGuide type="top" id="9ee-Nq-heu"/>
                         <viewControllerLayoutGuide type="bottom" id="BhN-LL-BXx"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="lNH-RV-V6Q" customClass="PaneView" customModule="HomeInspection" customModuleProvider="target">
+                    <view key="view" contentMode="scaleToFill" id="lNH-RV-V6Q">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -371,10 +382,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GJV-qA-gP9">
-                                        <rect key="frame" x="0.0" y="0.0" width="768" height="96"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="768" height="80"/>
                                         <color key="backgroundColor" white="0.17999999999999999" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="96" id="8NL-kM-dHe"/>
+                                            <constraint firstAttribute="height" constant="80" id="8NL-kM-dHe"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <state key="normal" title="Address">
@@ -385,9 +396,9 @@
                                         </connections>
                                     </button>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ehk-TG-Qhd">
-                                        <rect key="frame" x="0.0" y="96" width="768" height="928"/>
+                                        <rect key="frame" x="0.0" y="80" width="768" height="944"/>
                                         <connections>
-                                            <segue destination="sH8-OL-yzu" kind="embed" id="fVW-x3-rcj"/>
+                                            <segue destination="sH8-OL-yzu" kind="embed" identifier="embedTableInPaneView" id="4PV-id-dhg"/>
                                         </connections>
                                     </containerView>
                                 </subviews>
@@ -450,7 +461,7 @@
                                                     <constraint firstAttribute="width" constant="192" id="Ih4-DA-2oQ"/>
                                                 </constraints>
                                                 <connections>
-                                                    <segue destination="XVE-9u-RpD" kind="embed" id="Efz-0Y-afu"/>
+                                                    <segue destination="XVE-9u-RpD" kind="embed" identifier="embedPaneInInspDetailsView" id="Efz-0Y-afu"/>
                                                 </connections>
                                             </containerView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Rn-Dn-v6n">
@@ -624,32 +635,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="0.17999999999999999" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PaneCell" id="iN5-Hz-isy">
-                                <rect key="frame" x="0.0" y="28" width="768" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iN5-Hz-isy" id="96F-0s-UNO">
-                                    <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mok-Rs-Iep">
-                                            <rect key="frame" x="8" y="0.0" width="752" height="35.5"/>
-                                            <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                            <state key="normal" title="Sample Section">
-                                                <color key="titleColor" cocoaTouchSystemColor="lightTextColor"/>
-                                            </state>
-                                        </button>
-                                    </subviews>
-                                    <color key="backgroundColor" white="0.17999999999999999" alpha="1" colorSpace="calibratedWhite"/>
-                                    <constraints>
-                                        <constraint firstAttribute="bottomMargin" secondItem="Mok-Rs-Iep" secondAttribute="bottom" id="NdV-uQ-VJm"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="Mok-Rs-Iep" secondAttribute="trailing" id="T3h-C9-Amr"/>
-                                        <constraint firstItem="Mok-Rs-Iep" firstAttribute="leading" secondItem="96F-0s-UNO" secondAttribute="leadingMargin" id="dCM-6A-uZ0"/>
-                                        <constraint firstItem="Mok-Rs-Iep" firstAttribute="top" secondItem="96F-0s-UNO" secondAttribute="top" id="fUe-N7-3Wz"/>
-                                    </constraints>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
                     </tableView>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2VK-9f-m7k" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -658,8 +643,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Amg-T0-GCF"/>
         <segue reference="Q0c-Xq-bxB"/>
-        <segue reference="ADe-vq-JL1"/>
+        <segue reference="Efz-0Y-afu"/>
+        <segue reference="Amg-T0-GCF"/>
     </inferredMetricsTieBreakers>
 </document>

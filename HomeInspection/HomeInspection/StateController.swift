@@ -44,10 +44,10 @@ class StateController {
     private(set) var sections = [Section]()
     
     // List of all subsection names with unique subSectionId
-    private var subsections = [SubSection]()
+    private(set) var subsections = [SubSection]()
     
     // List of all comments with unique commentId
-    private var comments = [Comment]()
+    private(set) var comments = [Comment]()
     
     // Mapping for section num, subsection num, and comment num in a subsection to a single commentId. NEED TO FIX MAPPING FUNCTION THAT FILLS THESE IN CORRECTLY
     private var commentIds = [[[Int]]]()
@@ -165,6 +165,7 @@ class StateController {
     
     // Loads Sample sections in for testing (This will also be handled by the database integration code once implemented)
     func loadInitialSections() {
+        sections.append(Section(id: 0, name: ""))
         sections.append(Section(id: 1, name: "Bad Sample Section: Kitchen"))
         sections.append(Section(id: 2, name: "Good Sample Section: Grounds"))
         sections.append(Section(id: 3, name: "Sample Section 3"))

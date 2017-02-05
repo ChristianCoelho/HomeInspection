@@ -28,6 +28,14 @@ class InspDetailsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "embedPaneInInspDetailsView") {
+            let paneVC = segue.destination as! PaneViewController
+            
+            paneVC.isInspectionLoaded = false;
+            
+        }
+    }
     
 }
 
