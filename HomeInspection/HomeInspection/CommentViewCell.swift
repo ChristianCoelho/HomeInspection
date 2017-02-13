@@ -66,18 +66,14 @@ class CommentViewCell: UITableViewCell {
         
         switch (severity) {
         case 0:
-            commentTextAttributes[NSUnderlineStyleAttributeName] = 0
-            commentTextAttributes[NSFontAttributeName] = UIFont.systemFont(ofSize: 16)
-            newText = NSMutableAttributedString(string: oldText, attributes: commentTextAttributes)
-            commentTextButton.setAttributedTitle(newText, for: .normal)
-            break;
-        case 1:
+            // Low severity -> underline
             commentTextAttributes[NSUnderlineStyleAttributeName] = 1
             commentTextAttributes[NSFontAttributeName] = UIFont.systemFont(ofSize: 16)
             newText = NSMutableAttributedString(string: oldText, attributes: commentTextAttributes)
             commentTextButton.setAttributedTitle(newText, for: .normal)
             break;
-        case 2:
+        case 1:
+            // High severity -> bold + underline
             commentTextAttributes[NSUnderlineStyleAttributeName] = 1
             commentTextAttributes[NSFontAttributeName] = UIFont.boldSystemFont(ofSize: 16)
             newText = NSMutableAttributedString(string: oldText, attributes: commentTextAttributes)

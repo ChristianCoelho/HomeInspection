@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		41072BC91E444991003D3A88 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41072BC81E444991003D3A88 /* Section.swift */; };
+		411F938A1E513FF8008F4FA2 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411F93891E513FF8008F4FA2 /* SwiftyJSON.swift */; };
+		411F938C1E514A33008F4FA2 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411F938B1E514A33008F4FA2 /* PhotoViewController.swift */; };
 		41243D4C1DF88AC5007747C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41243D4B1DF88AC5007747C3 /* AppDelegate.swift */; };
 		41243D4E1DF88AC5007747C3 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41243D4D1DF88AC5007747C3 /* DashboardViewController.swift */; };
 		41243D511DF88AC5007747C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41243D4F1DF88AC5007747C3 /* Main.storyboard */; };
@@ -55,6 +57,8 @@
 
 /* Begin PBXFileReference section */
 		41072BC81E444991003D3A88 /* Section.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
+		411F93891E513FF8008F4FA2 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		411F938B1E514A33008F4FA2 /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		41243D481DF88AC5007747C3 /* HomeInspection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeInspection.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41243D4B1DF88AC5007747C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		41243D4D1DF88AC5007747C3 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
@@ -144,6 +148,8 @@
 				412C45181E3C12AF00D713D6 /* Inspection Page */,
 				41243D4F1DF88AC5007747C3 /* Main.storyboard */,
 				412FA1031E2715E200DE6BB9 /* StateController.swift */,
+				411F938B1E514A33008F4FA2 /* PhotoViewController.swift */,
+				411F93891E513FF8008F4FA2 /* SwiftyJSON.swift */,
 				41E047DD1E28010500E6804B /* Data Models */,
 				41E047DE1E28011900E6804B /* Other Stuff */,
 			);
@@ -380,6 +386,7 @@
 			files = (
 				41E047CD1E27F26700E6804B /* LookupView.swift in Sources */,
 				412FA1141E27200100DE6BB9 /* InspDetailsViewController.swift in Sources */,
+				411F938A1E513FF8008F4FA2 /* SwiftyJSON.swift in Sources */,
 				41243D4E1DF88AC5007747C3 /* DashboardViewController.swift in Sources */,
 				41072BC91E444991003D3A88 /* Section.swift in Sources */,
 				41DF96FF1E46C76200950A87 /* PaneTableViewCell.swift in Sources */,
@@ -398,6 +405,7 @@
 				412C45351E3C4F5000D713D6 /* SubSectionHeaderViewCell.swift in Sources */,
 				41243D4C1DF88AC5007747C3 /* AppDelegate.swift in Sources */,
 				41E047E01E2805ED00E6804B /* InspectionTableViewController.swift in Sources */,
+				411F938C1E514A33008F4FA2 /* PhotoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

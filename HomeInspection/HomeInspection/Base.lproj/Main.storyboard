@@ -337,7 +337,7 @@
                                     <searchBar contentMode="redraw" barStyle="black" placeholder="Search Previous Inspections By Address" translatesAutoresizingMaskIntoConstraints="NO" id="Kjn-Dz-ODC">
                                         <rect key="frame" x="0.0" y="50" width="768" height="50"/>
                                         <color key="barTintColor" white="0.25" alpha="1" colorSpace="calibratedWhite"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="yes" spellCheckingType="yes" keyboardAppearance="alert"/>
                                         <scopeButtonTitles>
                                             <string>Title</string>
                                             <string>Title</string>
@@ -476,13 +476,15 @@
                                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="c1X-Rk-M9d">
                                                                         <rect key="frame" x="20" y="20" width="496" height="238"/>
                                                                         <subviews>
-                                                                            <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="s4y-Q5-9GD">
+                                                                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="snc-Kn-JXh">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="238" height="238"/>
-                                                                                <color key="backgroundColor" white="0.29999999999999999" alpha="1" colorSpace="calibratedWhite"/>
                                                                                 <constraints>
-                                                                                    <constraint firstAttribute="width" secondItem="s4y-Q5-9GD" secondAttribute="height" id="SyR-sP-ceo"/>
+                                                                                    <constraint firstAttribute="width" secondItem="snc-Kn-JXh" secondAttribute="height" multiplier="1:1" id="hQ4-YW-Shd"/>
                                                                                 </constraints>
-                                                                            </imageView>
+                                                                                <connections>
+                                                                                    <segue destination="PTF-qb-Cky" kind="embed" id="dDD-l9-tN6"/>
+                                                                                </connections>
+                                                                            </containerView>
                                                                             <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9c3-aG-5pK">
                                                                                 <rect key="frame" x="258" y="0.0" width="238" height="238"/>
                                                                                 <subviews>
@@ -641,10 +643,80 @@
             </objects>
             <point key="canvasLocation" x="-300" y="-502"/>
         </scene>
+        <!--Photo View Controller-->
+        <scene sceneID="BtH-L4-Sxn">
+            <objects>
+                <viewController id="PTF-qb-Cky" customClass="PhotoViewController" customModule="HomeInspection" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CIb-UE-ORP">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KJ8-7v-eel">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0pf-Jh-xdd">
+                                <rect key="frame" x="0.0" y="819" width="768" height="205"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="byp-YW-SyF">
+                                        <rect key="frame" x="0.0" y="0.0" width="768" height="205"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="14N-Dr-C7a">
+                                                <rect key="frame" x="0.0" y="0.0" width="379" height="205"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <state key="normal" title="Camera">
+                                                    <color key="titleColor" cocoaTouchSystemColor="lightTextColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="Camera:" destination="PTF-qb-Cky" eventType="touchUpInside" id="7eS-WS-4Dz"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Re2-Mq-taf">
+                                                <rect key="frame" x="389" y="0.0" width="379" height="205"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <state key="normal" title="Import">
+                                                    <color key="titleColor" cocoaTouchSystemColor="lightTextColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="importImage:" destination="PTF-qb-Cky" eventType="touchUpInside" id="7kw-B8-5hA"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="byp-YW-SyF" secondAttribute="bottom" id="OYb-8X-2M6"/>
+                                    <constraint firstAttribute="trailing" secondItem="byp-YW-SyF" secondAttribute="trailing" id="UcB-hC-K0D"/>
+                                    <constraint firstItem="byp-YW-SyF" firstAttribute="top" secondItem="0pf-Jh-xdd" secondAttribute="top" id="rW1-i8-ZVV"/>
+                                    <constraint firstItem="byp-YW-SyF" firstAttribute="leading" secondItem="0pf-Jh-xdd" secondAttribute="leading" id="tVk-ce-gTY"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0pf-Jh-xdd" firstAttribute="height" secondItem="KJ8-7v-eel" secondAttribute="height" multiplier="1:5" id="HcS-F5-EkZ"/>
+                            <constraint firstAttribute="trailing" secondItem="KJ8-7v-eel" secondAttribute="trailing" id="K32-UE-sxJ"/>
+                            <constraint firstAttribute="bottom" secondItem="0pf-Jh-xdd" secondAttribute="bottom" id="TOO-rr-HIE"/>
+                            <constraint firstItem="KJ8-7v-eel" firstAttribute="top" secondItem="CIb-UE-ORP" secondAttribute="top" id="XgP-vk-mjn"/>
+                            <constraint firstAttribute="trailing" secondItem="0pf-Jh-xdd" secondAttribute="trailing" id="aLF-9s-kHg"/>
+                            <constraint firstItem="0pf-Jh-xdd" firstAttribute="leading" secondItem="CIb-UE-ORP" secondAttribute="leading" id="eCp-wB-vdd"/>
+                            <constraint firstAttribute="bottom" secondItem="KJ8-7v-eel" secondAttribute="bottom" id="iKq-Vc-vfA"/>
+                            <constraint firstItem="KJ8-7v-eel" firstAttribute="leading" secondItem="CIb-UE-ORP" secondAttribute="leading" id="xJd-0E-Gtc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="myImageView" destination="KJ8-7v-eel" id="c0y-f8-mBz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="81I-hJ-G8R" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2613" y="202"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Q0c-Xq-bxB"/>
         <segue reference="Efz-0Y-afu"/>
-        <segue reference="Amg-T0-GCF"/>
+        <segue reference="Q0c-Xq-bxB"/>
+        <segue reference="WDh-PB-lX3"/>
     </inferredMetricsTieBreakers>
 </document>
