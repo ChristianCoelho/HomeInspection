@@ -18,13 +18,27 @@ class StateController {
      * Holds the State controller singleton, managing the current state of a single inspection.
      */
     static let state = StateController();
+    private let INSPECTION = 1
+    private let SECTION = 2
+    private let SUBSECTION = 3
+    private let COMMENT = 4
+    private let RESULT = 5
     
     // Default initializer - Hidden to prevent reinitializing state. If one needs to load new values, use the loadState function (not implemented yet).
     private init() {
+        print("init state")
+        //getSections();
+        pullFromUrl(option: SECTION)
+        pullFromUrl(option: SUBSECTION)
+        pullFromUrl(option: COMMENT)
         
+        // Need to join pull threads before continuing. Sleep is temporyary to account for delay in receiving required data
+        sleep(10)
+        /*
         loadInitialSections();
         loadInitialSubSections();
         loadInitialComments();
+ */
     }
     
     
@@ -78,7 +92,7 @@ class StateController {
     }
     // Adds one to the severity and modulo's the result by 3. Returns the new severity value
     func userChangedSeverity(resultId: Int32) -> Int8 {
-        self.results[Int(resultId)].severity = (self.results[Int(resultId)].severity + 1) % 3
+        self.results[Int(resultId)].severity = (self.results[Int(resultId)].severity + 1) % 2
         return self.results[Int(resultId)].severity
     }
     
@@ -176,5 +190,100 @@ class StateController {
         sections.append(Section(id: 8, name: "Sample Section 8"))
     }
     
+    
+    /* Database Integration Functions */
+    
+    
+    func pullFromUrl(option: Int) {
+        var endPointURL: String = ""
+        
+        switch option {
+        case self.INSPECTION:
+            break
+        case self.SECTION:
+            endPointURL = "http://crm.professionalhomeinspection.net/sections.json"
+            break
+        case self.SUBSECTION:
+            endPointURL = "http://crm.professionalhomeinspection.net/subsections.json"
+            break
+        case self.COMMENT:
+            endPointURL = "http://crm.professionalhomeinspection.net/comments.json"
+            break
+        case self.RESULT:
+            break
+        default:
+            break
+        }
+        
+        guard let url = URL(string: endPointURL) else {
+            print("Error: cannot create URL")
+            return
+        }
+        let urlRequest = URLRequest(url: url)
+        
+        let session = URLSession.shared
+        
+        let task = session.dataTask(with: urlRequest) {
+            (data, response, error) in
+            guard error == nil else {
+                print("error calling GET on option")
+                print(error!)
+                return
+            }
+            guard let responseData = data else {
+                print ("Error: did not recieve data")
+                return
+            }
+            do {
+                let json = JSON(data: responseData)
+                switch option {
+                case self.INSPECTION:
+                    break
+                case self.SECTION:
+                    self.parseSections(json: json)
+                    break
+                case self.SUBSECTION:
+                    self.parseSubSections(json: json)
+                    break
+                case self.COMMENT:
+                    self.parseComments(json: json)
+                    break
+                case self.RESULT:
+                    break
+                default:
+                    break
+                }
+            }
+        }
+        task.resume()
+        
+    }
+    
+    func parseSections(json: JSON) {
+        for (index, subJson) in json["sections"] {
+            self.sections.append(Section(id: subJson["id"].intValue,
+                                         name: subJson["name"].string))
+        }
+    }
+    func parseSubSections(json: JSON) {
+        for (index, subJson) in json["subsections"] { //iterate through and store into comments
+            self.subsections.append(SubSection(subSectionId: subJson["id"].intValue - 121,
+                                               name: subJson["name"].string,
+                                               sectionId: subJson["sec_id"].intValue))
+        }
+    }
+    func parseComments(json: JSON) {
+        for (index, subJson) in json["comments"] { //iterate through and store into comments
+            self.comments.append(Comment(commentId: subJson["id"].intValue,
+                                         subSectionId: subJson["subsec_id"].intValue - 121,
+                                         rank: 0,
+                                         commentText: subJson["comment"].string,
+                                         defaultFlags: [], //Fix this
+                active: subJson["active"] == 1 ? true:false))
+            print(subJson["default_flags"])
+        }
+    }
+    
+    /* End of Database Integration Functions */
     
 }

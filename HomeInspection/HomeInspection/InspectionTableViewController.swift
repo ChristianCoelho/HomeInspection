@@ -40,6 +40,9 @@ class InspectionTableViewController: UITableViewController {
     // Function called on loading the table view
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Register table refresh notification
+        NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "refresh"), object: nil, queue: nil, using: refreshTable)
 
         // Register XIB reuse identifiers
         let sscell = UINib(nibName: "SubSectionHeaderViewCell", bundle: nil)
@@ -181,6 +184,11 @@ class InspectionTableViewController: UITableViewController {
             print("Comment Tapped, updating severity for result \(commentCell.resultId!) to \(newSeverity)")
             commentCell.updateSeverity(severity: newSeverity)
         }
+    }
+    
+    func refreshTable(notification: Notification) -> Void {
+        print("Refreshing table")
+        self.tableView.reloadData()
     }
     
     /* End of Helper Functions */

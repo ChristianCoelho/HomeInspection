@@ -23,6 +23,7 @@ class InspectionViewController: UIViewController {
         sectionLabel.text = newSection.sectionName
         
         // ADD CODE TO LOAD SECTION/SUBSECTION/COMMENTS
+        NotificationCenter.default.post(name: Notification.Name(rawValue: "refresh"), object: nil)
     }
     
     // Other Functions
